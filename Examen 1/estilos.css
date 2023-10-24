@@ -1,0 +1,58 @@
+.contenedor {
+   font-family: Arial;
+   font-size: 12pt;
+   margin: 0 auto;
+   width:80%;
+   height:80%;
+}
+
+.cabecera {
+   height:20%;
+   text-align:right;
+   margin-bottom:0;
+}
+.menu{
+   background-color: #cfcfcf;
+}
+
+.cuerpo{
+   background-image: url('./imagenes/proposito.png'); 
+   padding:15px;
+   background-position: center;
+   background-repeat: no-repeat;
+}
+
+.pie{
+   background-color: #cfcfcf;
+   text-align: center;
+}
+
+h2 {
+   color:#00cc00;
+}
+
+ul{
+	margin:10px;
+	padding:10px;
+}
+
+li{
+   list-style-type: none;
+   display: inline;
+}
+
+a{
+   text-decoration:none;
+   color:#000000;
+   padding-right: 15px;
+}
+
+a:hover {
+   color:#3333FF;
+}
+
+td, textarea, input, select, option {
+   font-family: Verdana;
+   font-size: 11pt;
+   text-transform: uppercase;
+}

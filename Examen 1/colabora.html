@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> colabora.html </TITLE>
+<link rel="stylesheet" type="text/css" href="estilos.css">
+</HEAD>
+<BODY >
+<div class="contenedor" >
+	<div class="cabecera">
+		<img src="./imagenes/cabecera.jpg" border="0" usemap="#salesianos">
+		<map name="salesianos">
+			<area shape="rect" title="Salesianos" href="https://zaragoza.salesianos.edu" coords="20,26,78,84">
+		</map>
+		</div>
+		<div class="menu">
+			<ul>
+				<li><a href="./index.html"> Inicio</a></li>
+				<li><a href="./noticias.html"> Noticias</a></li>
+				<li><a href="./colabora.html"> Colabora</a></li>
+				<li><a href="./encuesta.html"> Encuesta</a></li>
+			</ul>
+		</div>
+	<div class="cuerpo">
+	<!-- Preparar el formulario de colabora -->
+		<form action="./index.html">
+			<table width="100%" border="0">
+				<tr>
+					<td colspan="3" align="center" bgcolor="lightgrey">INSCRIPCIÓN EVENTO ZONA CENTRO	</td>
+				</tr>
+				<tr>
+					<td>Nombre del participante *</td>
+					<td><input type="text" name="nombre" id="nombre" size="20" placeholder="Nombre" maxlenght="20" required></td>
+					<td><input type="text" name="apellido" id="apellido" size="40" placeholder="Apellidos" maxlenght="40" required></td>
+					
+				</tr>
+				<tr>
+					<td>Empresa *</td>
+					<td colspan="2"><input type="text" name="empresa" id="empresa" size="60" maxlenght="80" required></td>
+				</tr>
+				<tr>
+					<td>Evento *</td>
+					<td>
+						<select name="evento" id="evento" required>
+							<option selected value="">Elige Evento</option>
+							<option value="1">Formación EFQM 202</option>
+							<option value="2">Dirección FP</option>
+							<option value="3">Proyecto Pastoral</option>
+							<option value="4">Reunión Dirección</option>
+						</select>
+					</td>
+					<td><input type="date" name="fecha" id="fecha" required></td>
+				</tr>
+				<tr>
+					<td>Teléfono y email</td>
+					<td><input type="tel" name="telf" id="telf" placeholder="Teléfono" maxlenght="20" size="20"></td>
+					<td><input type="email" name="correo" id="correo" placeholder="email" maxlenght="40" size="40"></td>
+				</tr>
+				<tr>
+					<td>Domicilio y Ciudad *</td>
+					<td><input type="text" name="domicilio" name="domicilio" placeholder="Domicilio" maxlenght="40" size="40" required></td>
+					<td>
+						<select name="ciudad" id="ciudad" required>
+							<option selected value="">Elige Ciudad</option>
+							<option value="Zaragoza">Zaragoza</option>
+							<option value="Huesca">Huesca</option>
+							<option value="Teruel">Teruel</option>
+							<option value="Barcelona">Barcelona</option>
+							<option value="Tarragona">Tarragona</option>
+							<option value="Lleida">Lleida</option>
+							<option value="Girona">Girona</option>
+							<option value="Valencia">Valencia</option>
+							<option value="Castellón">Castellón</option>
+							<option value="Alicante">Alicante</option>
+							<option value="Murcia">Murcia</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Participación en: *</td>
+					<td colspan="2" required>
+						Workshops <input type="checkbox" name="participación" id="participación" value="1">
+						Conferencias <input type="checkbox" name="participación" id="participación" value="2">
+						Exposición <input type="checkbox" name="participación" id="participación" value="3">
+						Cena final <input type="checkbox" name="participación" id="participación" value="4">
+					</td>
+				</tr>
+				<tr>
+					<td>Necesita alojamiento: *</td>
+					<td colspan="2" required>
+						Sí <input type="radio" name="alojamiento" id="alojamiento" value="1">
+						No <input type="radio" name="alojamiento" id="alojamiento" value="0">
+					</td>
+				</tr>	
+				<tr>
+					<td>Subir imagen DNI</td>
+					<td colspan="2"><input type="file" name="dni" id="dni"></td>
+				</tr>	
+				<tr>
+					<td>Observaciones</td>
+					<td colspan="2"><textarea cols="80" rows="5"></textarea></td>
+				</tr>	
+				<tr>
+					<td colspan="3" align="center"><input type="submit" value="Enviar Formulario"></td>
+				</tr>	
+			</table>
+		</form>
+	<div class="pie">
+		<marquee direction="right">
+			<a href="https://www.bsh-group.com/es/"><img src="./imagenes/bsh.jpg"></a>
+			<a href="https://www.caf.net/es/trabaja-caf/trabaja-caf.php"><img src="./imagenes/caf.jpg"></a>
+			<a href="https://www.aragon.es/"><img src="./imagenes/dga.jpg"></a>
+			<a href="https://www.zaragoza.es/sede/"><img src="./imagenes/ayuntamiento.png"></a>
+		</marquee>
+	</div>
+</div>
+</BODY>
+</HTML>
