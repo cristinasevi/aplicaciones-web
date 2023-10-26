@@ -1,0 +1,44 @@
+body {
+    background-color: rgb(228, 242, 255);
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    margin: 0; 
+    overflow: hidden;
+  }
+
+*{
+    font-family: Arial;
+  }
+
+.teclado{
+    padding: 10px;
+    border-radius: 5px;
+    border: solid 2px rgb(255, 255, 255);
+    background-color: rgb(80, 178, 234);
+}
+
+input{
+    border: 0px;
+    padding: 3px;
+    border-radius: 2px;
+}
+
+.clave{
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+.tecladoAlfa{
+    float: left;
+}
+
+.tecladoNum{
+    float: right;
+    padding-left: 10px;
+}
+
+img{
+    cursor: pointer;
+}
