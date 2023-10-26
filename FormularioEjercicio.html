@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>FormularioEjercicio.html</title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-family: "Arial";
+            font-size: 12px;
+        }
+    </style>
+    <form action="FormularioFin.html">
+        <img src="https://agenciacolocacionzaragoza.salesianos.edu/images/logo_bolsa.gif" width="300">
+        <table width="50%" align="center" border="0" cellspacing="10" cellpadding="5">
+            <tr>
+                <td colspan="2" bgcolor="lightgrey" align="right">
+                    <p>
+                        <font size="3" face="Arial" color="white"><b>Alta de candidatos</b></font>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <p>Rellene los siguientes datos de forma correcta.<br>* Campos obligatorios</p>
+                </td>
+            </tr>
+            <tr align="center" border="1">
+                <td bgcolor="lightgrey" colspan="2">
+                    <font size="1" face="Helvetica"><b>Datos para acceder a la web</b></font>
+                </td>
+            </tr>
+            <tr>
+                <td>Email *</td>
+                <td><input type="email" name="correo" id="correo" maxlenght="9" size="40" required></td>
+            </tr>
+            <tr>
+                <td>Password *</td>
+                <td><input type="password" name="clave" id="clave" maxlenght="10" size="15" required></td>
+            </tr>
+            <tr align="center">
+                <td bgcolor="lightgrey" colspan="3">
+                    <font size="1" face="Helvetica"><b>Datos personales</b></font>
+                </td>
+            </tr>
+            <tr>
+                <td>Nombre *</td>
+                <td><input type="text" name="nombre" id="nombre" maxlenght="40" size="20" required></td>
+            </tr>
+            <tr>
+                <td>Apellidos *</td>
+                <td><input type="text" name="apellido1" id="apellido1" maxlenght="40" size="20" required><input
+                        type="text" name="apellido2" id="apellido2" maxlenght="40" size="20" required></td>
+            </tr>
+            <tr>
+                <td>Fecha de nacimiento *</td>
+                <td><input type="date" name="fecha" id="fecha" required></td>
+            </tr>
+            <tr>
+                <td>Teléfono</td>
+                <td><input type="tel" name="telf" id="telf" maxlenght="9" size="10"></td>
+            </tr>
+            <tr>
+                <td>Móvil</td>
+                <td><input type="tel" name="mov" id="mov" maxlenght="9" size="10"></td>
+            </tr>
+            <tr>
+                <td>¿Alumno de Salesianos?</td>
+                <td><select name="alumno" id="alumno">
+                        <option value="Sí">Sí</option>
+                        <option value="No">No</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>¿Alumno de cursillos?</td>
+                <td><select name="cursillo" id="cursillo">
+                        <option value="Sí">Sí</option>
+                        <option value="No">No</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Sí<input type="radio" name="discapacidad" id="discapacidad" value="Sí">
+                    No<input type="radio" name="discapacidad" id="discapacidad" value="No" selected>
+                </td>
+                <td>¿Tiene reconocida alguna discapacidad igual o superior al 33%?</td>
+            </tr>
+            <tr>
+                <td>
+                    Sí<input type="radio" name="demandante" id="demandante" value="Sí">
+                    No<input type="radio" name="demandante" id="demandante" value="No" selected>
+                </td>
+                <td>¿Está vd. inscrito en el Servicio Público de Empleo como demandante?<br>Indicar fecha <input
+                        type="date" name="fecha_demandante" id="fecha_demandante"></td>
+            </tr>
+            <tr>
+                <td>
+                    Sí<input type="radio" name="prestación" id="prestación" value="Sí">
+                    No<input type="radio" name="prestación" id="prestación" value="No" selected>
+                </td>
+                <td>Prestación por Desempleo, Subsidio o R.A.I.<br>¿Hasta cuando? <input type="date"
+                        name="fecha_prestación" id="fecha_prestación"></td>
+            </tr>
+            <tr>
+                <td>
+                    Sí<input type="radio" name="exclusión" id="exclusión" value="Sí">
+                    No<input type="radio" name="exclusión" id="exclusión" value="No" selected>
+                </td>
+                <td>¿Situación de exclusión social?</td>
+            </tr>
+            <tr align="center">
+                <td bgcolor="lightgrey" colspan="3">
+                    <font size="1" face="Helvetica"><b>Currículo</b></font>
+                </td>
+            </tr>
+            <tr>
+                <td>NIF *</td>
+                <td><input type="nif" name="nif" id="nif" maxlenght="9" size="10" required></td>
+            </tr>
+            <tr>
+                <td>País de residencia</td>
+                <td>
+                    <select name="país" id="país">
+                        <option value="1">Afganistán</option>
+                        <option value="3">Albania</option>
+                        <option value="4">Alemania</option>
+                        <option value="5">Andorra</option>
+                        <option value="6">Angola</option>
+                        <option value="7">Anguilla</option>
+                        <option value="8">Antártida</option>
+                        <option value="9">Antigua y Barbuda</option>
+                        <option value="10">Antillas Holandesas</option>
+                        <option value="11">Arabia Saudí</option>
+                        <option value="12">Argelia</option>
+                        <option value="13">Argentina</option>
+                        <option value="14">Armenia</option>
+                        <option value="15">Aruba</option>
+                        <option value="131">ARY Macedonia</option>
+                        <option value="16">Australia</option>
+                        <option value="17">Austria</option>
+                        <option value="18">Azerbaiyán</option>
+                        <option value="19">Bahamas</option>
+                        <option value="20">Bahréin</option>
+                        <option value="21">Bangladesh</option>
+                        <option value="22">Barbados</option>
+                        <option value="24">Bélgica</option>
+                        <option value="25">Belice</option>
+                        <option value="26">Benin</option>
+                        <option value="27">Bermudas</option>
+                        <option value="28">Bhután</option>
+                        <option value="23">Bielorrusia</option>
+                        <option value="29">Bolivia</option>
+                        <option value="30">Bosnia y Herzegovina</option>
+                        <option value="31">Botsuana</option>
+                        <option value="33">Brasil</option>
+                        <option value="34">Brunéi</option>
+                        <option value="35">Bulgaria</option>
+                        <option value="36">Burkina Faso</option>
+                        <option value="37">Burundi</option>
+                        <option value="38">Cabo Verde</option>
+                        <option value="40">Camboya</option>
+                        <option value="41">Camerún</option>
+                        <option value="42">Canadá</option>
+                        <option value="44">Chad</option>
+                        <option value="46">Chile</option>
+                        <option value="47">China</option>
+                        <option value="48">Chipre</option>
+                        <option value="50">Ciudad del Vaticano</option>
+                        <option value="52">Colombia</option>
+                        <option value="53">Comoras</option>
+                        <option value="55">Congo</option>
+                        <option value="57">Corea del Norte</option>
+                        <option value="58">Corea del Sur</option>
+                        <option value="59">Costa de Marfil</option>
+                        <option value="60">Costa Rica</option>
+                        <option value="61">Croacia</option>
+                        <option value="62">Cuba</option>
+                        <option value="63">Dinamarca</option>
+                        <option value="64">Dominica</option>
+                        <option value="66">Ecuador</option>
+                        <option value="67">Egipto</option>
+                        <option value="68">El Salvador</option>
+                        <option value="69">Emiratos Árabes Unidos</option>
+                        <option value="70">Eritrea</option>
+                        <option value="71">Eslovaquia</option>
+                        <option value="72">Eslovenia</option>
+                        <option value="73" selected>España</option>
+                        <option value="75">Estados Unidos</option>
+                        <option value="76">Estonia</option>
+                        <option value="77">Etiopía</option>
+                        <option value="79">Filipinas</option>
+                        <option value="80">Finlandia</option>
+                        <option value="81">Fiyi</option>
+                        <option value="82">Francia</option>
+                        <option value="83">Gabón</option>
+                        <option value="84">Gambia</option>
+                        <option value="85">Georgia</option>
+                        <option value="87">Ghana</option>
+                        <option value="88">Gibraltar</option>
+                        <option value="89">Granada</option>
+                        <option value="90">Grecia</option>
+                        <option value="91">Groenlandia</option>
+                        <option value="92">Guadalupe</option>
+                        <option value="93">Guam</option>
+                        <option value="94">Guatemala</option>
+                        <option value="95">Guayana Francesa</option>
+                        <option value="96">Guinea</option>
+                        <option value="97">Guinea Ecuatorial</option>
+                        <option value="98">Guinea-Bissau</option>
+                        <option value="99">Guyana</option>
+                        <option value="100">Haití</option>
+                        <option value="102">Honduras</option>
+                        <option value="103">Hong Kong</option>
+                        <option value="104">Hungría</option>
+                        <option value="105">India</option>
+                        <option value="106">Indonesia</option>
+                        <option value="107">Irán</option>
+                        <option value="108">Iraq</option>
+                        <option value="109">Irlanda</option>
+                        <option value="32">Isla Bouvet</option>
+                        <option value="49">Isla de Navidad</option>
+                        <option value="161">Isla Norfolk</option>
+                        <option value="110">Islandia</option>
+                        <option value="39">Islas Caimán</option>
+                        <option value="51">Islas Cocos</option>
+                        <option value="56">Islas Cook</option>
+                        <option value="78">Islas Feroe</option>
+                        <option value="86">Islas Georgias del Sur y Sandwich del Sur</option>
+                        <option value="2">Islas Gland</option>
+                        <option value="101">Islas Heard y McDonald</option>
+                        <option value="138">Islas Malvinas</option>
+                        <option value="139">Islas Marianas del Norte</option>
+                        <option value="141">Islas Marshall</option>
+                        <option value="174">Islas Pitcairn</option>
+                        <option value="186">Islas Salomón</option>
+                        <option value="223">Islas Turcas y Caicos</option>
+                        <option value="74">Islas ultramarinas de Estados Unidos</option>
+                        <option value="234">Islas Vírgenes Británicas</option>
+                        <option value="235">Islas Vírgenes de los Estados Unidos</option>
+                        <option value="111">Israel</option>
+                        <option value="112">Italia</option>
+                        <option value="113">Jamaica</option>
+                        <option value="114">Japón</option>
+                        <option value="115">Jordania</option>
+                        <option value="116">Kazajstán</option>
+                        <option value="117">Kenia</option>
+                        <option value="118">Kirguistán</option>
+                        <option value="119">Kiribati</option>
+                        <option value="120">Kuwait</option>
+                        <option value="121">Laos</option>
+                        <option value="122">Lesotho</option>
+                        <option value="123">Letonia</option>
+                        <option value="124">Líbano</option>
+                        <option value="125">Liberia</option>
+                        <option value="126">Libia</option>
+                        <option value="127">Liechtenstein</option>
+                        <option value="128">Lituania</option>
+                        <option value="129">Luxemburgo</option>
+                        <option value="130">Macao</option>
+                        <option value="132">Madagascar</option>
+                        <option value="133">Malasia</option>
+                        <option value="134">Malawi</option>
+                        <option value="135">Maldivas</option>
+                        <option value="136">Malí</option>
+                        <option value="137">Malta</option>
+                        <option value="140">Marruecos</option>
+                        <option value="142">Martinica</option>
+                        <option value="143">Mauricio</option>
+                        <option value="144">Mauritania</option>
+                        <option value="145">Mayotte</option>
+                        <option value="146">México</option>
+                        <option value="147">Micronesia</option>
+                        <option value="148">Moldavia</option>
+                        <option value="149">Mónaco</option>
+                        <option value="150">Mongolia</option>
+                        <option value="151">Montserrat</option>
+                        <option value="152">Mozambique</option>
+                        <option value="153">Myanmar</option>
+                        <option value="154">Namibia</option>
+                        <option value="155">Nauru</option>
+                        <option value="156">Nepal</option>
+                        <option value="157">Nicaragua</option>
+                        <option value="158">Níger</option>
+                        <option value="159">Nigeria</option>
+                        <option value="160">Niue</option>
+                        <option value="162">Noruega</option>
+                        <option value="163">Nueva Caledonia</option>
+                        <option value="164">Nueva Zelanda</option>
+                        <option value="165">Omán</option>
+                        <option value="166">Países Bajos</option>
+                        <option value="167">Pakistán</option>
+                        <option value="168">Palau</option>
+                        <option value="169">Palestina</option>
+                        <option value="170">Panamá</option>
+                        <option value="171">Papúa Nueva Guinea</option>
+                        <option value="172">Paraguay</option>
+                        <option value="173">Perú</option>
+                        <option value="175">Polinesia Francesa</option>
+                        <option value="176">Polonia</option>
+                        <option value="177">Portugal</option>
+                        <option value="178">Puerto Rico</option>
+                        <option value="179">Qatar</option>
+                        <option value="180">Reino Unido</option>
+                        <option value="43">República Centroafricana</option>
+                        <option value="45">República Checa</option>
+                        <option value="54">República Democrática del Congo</option>
+                        <option value="65">República Dominicana</option>
+                        <option value="181">Reunión</option>
+                        <option value="182">Ruanda</option>
+                        <option value="183">Rumania</option>
+                        <option value="184">Rusia</option>
+                        <option value="185">Sahara Occidental</option>
+                        <option value="187">Samoa</option>
+                        <option value="188">Samoa Americana</option>
+                        <option value="189">San Cristóbal y Nevis</option>
+                        <option value="190">San Marino</option>
+                        <option value="191">San Pedro y Miquelón</option>
+                        <option value="192">San Vicente y las Granadinas</option>
+                        <option value="193">Santa Helena</option>
+                        <option value="194">Santa Lucía</option>
+                        <option value="195">Santo Tomé y Príncipe</option>
+                        <option value="196">Senegal</option>
+                        <option value="197">Serbia y Montenegro</option>
+                        <option value="198">Seychelles</option>
+                        <option value="199">Sierra Leona</option>
+                        <option value="200">Singapur</option>
+                        <option value="201">Siria</option>
+                        <option value="202">Somalia</option>
+                        <option value="203">Sri Lanka</option>
+                        <option value="204">Suazilandia</option>
+                        <option value="205">Sudáfrica</option>
+                        <option value="206">Sudán</option>
+                        <option value="207">Suecia</option>
+                        <option value="208">Suiza</option>
+                        <option value="209">Surinam</option>
+                        <option value="210">Svalbard y Jan Mayen</option>
+                        <option value="211">Tailandia</option>
+                        <option value="212">Taiwán</option>
+                        <option value="213">Tanzania</option>
+                        <option value="214">Tayikistán</option>
+                        <option value="215">Territorio Británico del Océano Índico</option>
+                        <option value="216">Territorios Australes Franceses</option>
+                        <option value="217">Timor Oriental</option>
+                        <option value="218">Togo</option>
+                        <option value="219">Tokelau</option>
+                        <option value="220">Tonga</option>
+                        <option value="221">Trinidad y Tobago</option>
+                        <option value="222">Túnez</option>
+                        <option value="224">Turkmenistán</option>
+                        <option value="225">Turquía</option>
+                        <option value="226">Tuvalu</option>
+                        <option value="227">Ucrania</option>
+                        <option value="228">Uganda</option>
+                        <option value="229">Uruguay</option>
+                        <option value="230">Uzbekistán</option>
+                        <option value="231">Vanuatu</option>
+                        <option value="232">Venezuela</option>
+                        <option value="233">Vietnam</option>
+                        <option value="236">Wallis y Futuna</option>
+                        <option value="237">Yemen</option>
+                        <option value="238">Yibuti</option>
+                        <option value="239">Zambia</option>
+                        <option value="240">Zimbabue</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Dirección *</td>
+                <td><input type="text" name="dirección" id="dirección" maxlenght="30" size="40" required></td>
+            </tr>
+            <tr>
+                <td>Población *</td>
+                <td><input type="text" name="población" id="población" maxlenght="30" size="20" required></td>
+            </tr>
+            <tr>
+                <td>Provincia</td>
+                <td>
+                    <select name="provincia" id="provincia">
+                        <option value="A Coruña" selected>A Coruña</option>
+                        <option value="Alava">Alava</option>
+                        <option value="Albacete">Albacete</option>
+                        <option value="Alicante">Alicante</option>
+                        <option value="Almería">Almería</option>
+                        <option value="Asturias">Asturias</option>
+                        <option value="Ávila">Ávila</option>
+                        <option value="Badajoz">Badajoz</option>
+                        <option value="Balearea">Baleares (Illes)</option>
+                        <option value="Barcelona">Barcelona</option>
+                        <option value="Burgos">Burgos</option>
+                        <option value="Cáceres">Cáceres</option>
+                        <option value="Cádiz">Cádiz</option>
+                        <option value="Cantabria">Cantabria</option>
+                        <option value="Castellón">Castellón</option>
+                        <option value="Ceuta">Ceuta</option>
+                        <option value="Ciudad Real">Ciudad Real</option>
+                        <option value="Córdoba">Córdoba</option>
+                        <option value="Cuenca">Cuenca</option>
+                        <option value="Girona">Girona</option>
+                        <option value="Granada">Granada</option>
+                        <option value="Guadalajara">Guadalajara</option>
+                        <option value="Gipuzkoa">Gipuzkoa</option>
+                        <option value="Huelva">Huelva</option>
+                        <option value="Huesca">Huesca</option>
+                        <option value="Jaén">Jaén</option>
+                        <option value="La Rioja">La Rioja</option>
+                        <option value="Las Palmas">Las Palmas</option>
+                        <option value="León">León</option>
+                        <option value="Lleida">Lleida</option>
+                        <option value="Lugo">Lugo</option>
+                        <option value="Madrid">Madrid</option>
+                        <option value="Málaga">Málaga</option>
+                        <option value="Melilla">Melilla</option>
+                        <option value="Murcia">Murcia</option>
+                        <option value="Navarra">Navarra</option>
+                        <option value="Ourense">Ourense</option>
+                        <option value="Palencia">Palencia</option>
+                        <option value="Pontevedra">Pontevedra</option>
+                        <option value="Salamanca">Salamanca</option>
+                        <option value="Santa Cruz de Tenerife">Santa Cruz de Tenerife</option>
+                        <option value="Segovia">Segovia</option>
+                        <option value="Sevilla">Sevilla</option>
+                        <option value="Soria">Soria</option>
+                        <option value="Tarragona">Tarragona</option>
+                        <option value="Teruel">Teruel</option>
+                        <option value="Toledo">Toledo</option>
+                        <option value="Valencia">Valencia</option>
+                        <option value="Valladolid">Valladolid</option>
+                        <option value="Vizcaya">Vizcaya</option>
+                        <option value="Zamora">Zamora</option>
+                        <option value="Zaragoza">Zaragoza</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>CP</td>
+                <td><input type="text" name="cp" id="cp" maxlenght="5" size="5"></td>
+            </tr>
+            <tr>
+                <td>Permiso de conducir</td>
+                <td><select name="carnet" id="carnet">
+                        <option value="Sí">Sí</option>
+                        <option value="No">No</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Nivel de estudios</td>
+                <td><select name="estudios" id="estudios">
+                        <option value="Sin estudios">Sin estudios</option>
+                        <option value="Graduado Escolar">Graduado Escolar</option>
+                        <option value="Graduado Educación Secundaria Obligatoria">Graduado Educación Secundaria
+                            Obligatoria</option>
+                        <option value="Bachillerato">Bachillerato</option>
+                        <option value="Ciclo Formativo Grado Medio">Ciclo Formativo Grado Medio </option>
+                        <option value="F.P.I.">F.P.I.</option>
+                        <option value="Ciclo Formativo Grado Superior">Ciclo Formativo Grado Superior</option>
+                        <option value="F.P.II.">F.P.II.</option>
+                        <option value="Universidad Grado Medio">Universidad Grado Medio</option>
+                        <option value="Licenciatura">Licenciatura</option>
+                        <option value="FORMACIÓN PROFESIONAL BÁSICA">FORMACIÓN PROFESIONAL BÁSICA</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Año finalización</td>
+                <td><input type="text" name="fecha_fin" id="fecha_fin" size="10"></td>
+            </tr>
+            <tr>
+
+                <td>Especialidades</td>
+                <td>
+                    <select name="especialidad1" id="especialidad1">
+                        <option value="23">AUTOMATIZACIÓN Y ROBÓTICA INDUSTRIAL</option>
+                        <option value="5">AUTOMOCIÓN</option>
+                        <option value="24">ELECTRICIDAD Y ELECTRÓNICA</option>
+                        <option value="2">INFORMÁTICA</option>
+                        <option value="25">INFORMÁTICA Y COMUNICACIONES</option>
+                        <option value="7">INSTALACIONES ELECTRÓTECNICAS Y AUTOMATIZADAS</option>
+                        <option value="4">MECANIZADO</option>
+                        <option value="1">TELECOMUNICACIONES</option>
+                    </select>
+
+                    <select name="especialidad2" id="especialidad2">
+                        <option value=""></option>
+                        <option value="23">AUTOMATIZACIÓN Y ROBÓTICA INDUSTRIAL</option>
+                        <option value="5">AUTOMOCIÓN</option>
+                        <option value="24">ELECTRICIDAD Y ELECTRÓNICA</option>
+                        <option value="2">INFORMÁTICA</option>
+                        <option value="25">INFORMÁTICA Y COMUNICACIONES</option>
+                        <option value="7">INSTALACIONES ELECTRÓTECNICAS Y AUTOMATIZADAS</option>
+                        <option value="4">MECANIZADO</option>
+                        <option value="1">TELECOMUNICACIONES</option>
+                    </select>
+
+                    <select name="especialidad3" id="especialidad3">
+                        <option value=""></option>
+                        <option value="23">AUTOMATIZACIÓN Y ROBÓTICA INDUSTRIAL</option>
+                        <option value="5">AUTOMOCIÓN</option>
+                        <option value="24">ELECTRICIDAD Y ELECTRÓNICA</option>
+                        <option value="2">INFORMÁTICA</option>
+                        <option value="25">INFORMÁTICA Y COMUNICACIONES</option>
+                        <option value="7">INSTALACIONES ELECTRÓTECNICAS Y AUTOMATIZADAS</option>
+                        <option value="4">MECANIZADO</option>
+                        <option value="1">TELECOMUNICACIONES</option>
+                    </select>
+
+                    <select name="especialidad4" id="especialidad4">
+                        <option value=""></option>
+                        <option value="23">AUTOMATIZACIÓN Y ROBÓTICA INDUSTRIAL</option>
+                        <option value="5">AUTOMOCIÓN</option>
+                        <option value="24">ELECTRICIDAD Y ELECTRÓNICA</option>
+                        <option value="2">INFORMÁTICA</option>
+                        <option value="25">INFORMÁTICA Y COMUNICACIONES</option>
+                        <option value="7">INSTALACIONES ELECTRÓTECNICAS Y AUTOMATIZADAS</option>
+                        <option value="4">MECANIZADO</option>
+                        <option value="1">TELECOMUNICACIONES</option>
+                    </select>
+
+                    <select name="especialidad5" id="especialidad5">
+                        <option value=""></option>
+                        <option value="23">AUTOMATIZACIÓN Y ROBÓTICA INDUSTRIAL</option>
+                        <option value="5">AUTOMOCIÓN</option>
+                        <option value="24">ELECTRICIDAD Y ELECTRÓNICA</option>
+                        <option value="2">INFORMÁTICA</option>
+                        <option value="25">INFORMÁTICA Y COMUNICACIONES</option>
+                        <option value="7">INSTALACIONES ELECTRÓTECNICAS Y AUTOMATIZADAS</option>
+                        <option value="4">MECANIZADO</option>
+                        <option value="1">TELECOMUNICACIONES</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Otros estudios *</td>
+                <td>
+                    <textarea rows="3" cols="30" name="otros" id="otros" required></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>Experiencia laboral</td>
+                <td>
+                    <textarea rows="3" cols="30" name="experiencia" id="experiencia"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>Cursos</td>
+                <td>
+                    <textarea rows="3" cols="30" name="cursos" id="cursos"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>Idiomas</td>
+                <td>
+                    <textarea rows="3" cols="30" name="idiomas" id="idiomas"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>Conocimientos de informática</td>
+                <td>
+                    <textarea rows="3" cols="30" name="conocimientos" id="conocimientos"></textarea>
+                </td>
+            </tr>
+            <tr align="center">
+                <td bgcolor="lightgrey" colspan="2">
+                    <font size="1" face="Helvetica"><b>Foto y curriculum</b></font>
+                </td>
+            </tr>
+            <tr>
+                <td>Foto<br>(jpg, gif o png)</td>
+                <td><input type="file" name="foto" id="foto" required>
+                    <p>El nombre del archivo tiene que ser el nombre y apellidos<br>La foto no debe exceder los 500 kb
+                        de tamaño.<br>En caso contrario, el alta no podrá efecturarse con éxito.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Currículum<br>(doc, docx, txt, pdf o odt)</td>
+                <td><input type="file" name="foto" id="foto" required>
+                    <p>El nombre del archivo tiene que ser el nombre y apellidos</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">Si tiene problemas para enviar sus archivos, tenga en cuenta los siguiente:</td>
+            </tr>
+            <tr>
+                <td colspan="2">FOTO<br>
+                    - El nombre del archivo tiene que ser el nombre y apellidos<br>
+                    - La foto no debe exceder los 500 kb de tamaño.<br>
+                    - La extensión tiene que ser jpg, gif o png. Cualquier otra extensión no será válida.</td>
+            </tr>
+            <tr>
+                <td colspan="2">CURRICULUM<br>
+                    - El nombre del archivo tiene que ser tu nombre y apellidos.<br>
+                    - El fichero no debe exceder los 2000 kb de tamaño.<br>
+                    - La extensión tiene que sea doc, ocx, txt, odt o pdf. Cualquier otra extensión no será válida.</td>
+            </tr>
+            <tr>
+                <td colspan="2">Si su navegador no está actualizado, pruebe a actualizar a una versión más reciente</td>
+            </tr>
+            <tr align="center">
+                <td bgcolor="lightgrey" colspan="2">
+                    <font size="1" face="Helvetica"><b>Código de seguridad</b></font>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><img src="https://agenciacolocacionzaragoza.salesianos.edu/captcha.php"> &nbsp;<input
+                        type="text" size="10"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="submit" value="AÑADIR CANDIDATO"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <font face="Helvetica" size="1">En cumplimiento del Reglamento UE 2016/679 del Parlamento Europeo y
+                        del Consejo de 27 de abril de 2016, relativo a la protección de las personas físicas en lo que
+                        respecta al tratamiento de datos personales y a la libre circulación de estos datos y de la Ley
+                        Orgánica 3/ 2018 de 5 de diciembre de protección de datos personales y garantía de los derechos
+                        digitales se le informa de que el tratamiento de sus datos personales es realizado por
+                        SALESIANOS Ntra. Sra. del Pilar c/ María Auxiliadora, 57, 50009 Zaragoza. El tratamiento de los
+                        datos de carácter personal se legitima en base al cumplimiento de una obligación legal [RGPD
+                        artículo 6.1 a), b), c). Sus datos personales serán tratados para la provisión de candidatos
+                        para vacantes laborales en centros educativos salesianos y para participar en procesos de
+                        selección de convocatorias de puestos de trabajo. Podrá ejercitar los derechos de acceso,
+                        rectificación, cancelación, oposición, limitación, y portabilidad mediante comunicación escrita,
+                        y adjuntando fotocopia del DNI, dirigida a María Auxiliadora, 57, 50009 Zaragoza. Asimismo,
+                        podrá solicitar información en la dirección de correo <a
+                            href="protecciondatos.zaragoza@salesianos.edu">protecciondatos.zaragoza@salesianos.edu</a>.
+                </td>
+                </font>
+            </tr>
+            <tr>
+                <td colspan="2"><a href="https://agenciacolocacionzaragoza.salesianos.edu/candidatos_alta.php"><img
+                            src="https://agenciacolocacionzaragoza.salesianos.edu/images/btn_candidatos.gif"
+                            align="left"></a><a
+                        href="https://agenciacolocacionzaragoza.salesianos.edu/empresas_alta.php"><img
+                            src="https://agenciacolocacionzaragoza.salesianos.edu/images/btn_empresas.gif"
+                            align="right"></a></td>
+
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
