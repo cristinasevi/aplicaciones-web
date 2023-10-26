@@ -1,5 +1,5 @@
 # aplicaciones-web
-Ejercicios hechos en la asignatura de Aplicaciones Web
+Ejercicios hechos en Aplicaciones Web
 
 Ruta absoluta: hacemos referencia a toda la ruta de carpetas donde se encuentra el archivo.
 
