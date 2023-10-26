@@ -1,0 +1,76 @@
+ <!-- COLORES, FONDOS, TEXTOS, FUENTES 
+ 	 font-size			tamaño del texto		pt in cm px    
+     font-family		familia de la fuente	nombre de la fuente
+	 font-weight		ancho de la fuente		normal, bold, bolder, lighter
+	 font-style			estilo de la letra		normal, italic, oblique
+	 font-size-adjust	ajusta el tamaño		none, número
+	 line-height		interlineado			pt in cm px
+	 color				color del texto			nombre del color
+	 text-decoration	Estilo especial			none, underline, italic, line-throught
+	 margin-left		margen izdo pgna		pt in cm px
+	 margin-right		margen dcho pgna		pt in cm px
+	 margin-top			margen superior pgna	pt in cm px
+	 text-align			alineacion texto		left, center, right
+	 text-indent		sangria del texto		pt in cm px
+	 text-transform		transformacion texto	uppercase, lowcase
+	 text-decoration	decorar el texto		none, underline, overline, blink, line-through, inherit
+	 background-color	color fondo				nombre o valor RGB
+	 background-image	imagen de fondo			url(nombre)
+	 background-repeat	repeticion del fondo	nº, no-repeat
+	 background-attachment  fijación del fondo		fixed
+	 background-position posicion imagen		center, left, right, top
+	 
+	 BLOQUES, CAPAS O CAJAS
+	 border				ancho, estilo, color	border:5px solid red
+	 border-style		top right bottom left   border-style:dotted solid double dashed
+	 border-color		top right bottom left   border-color:red green blue pink
+	 border-top			borde superior			border-top:thick double #6600CC
+	 border-right		borde derecho			border-right:medium solid #00ff00
+	 border-width		tamaño ancho caja
+						top right bottom left	border-width:10px, 20px,5px, 3px
+						top (right left) bottom
+						(top bottom) (right left)
+						(top right bottom left)
+	 margin				tamaño margen caja
+						top right bottom left	margin:10px, 20px,5px, 3px
+						top (right left) bottom
+						(top bottom) (right left)
+						(top right bottom left)
+	 margin-left		margen izdo.			margin-left: 5px
+	 margin-bottom		margen inferior			margin-bottom: 10px
+	 padding			tamaño relleno caja
+						top right bottom left	padding:10px, 20px,5px, 3px
+						top (right left) bottom
+						(top bottom) (right left)
+						(top right bottom left)
+	
+	TAMAÑO Y POSICIONAMIENTO
+	position			Tipo posicionamiento	static, absolute, fixed, relative, inherit
+	top					Distancia parte sup		top:5px			(Si position es static no tiene efecto)
+	right				Distancia parte dcha	right:5px		(Si position es static no tiene efecto)
+	botton				Distancia parte inf.	bottom:10px		(Si position es static no tiene efecto)
+	left				Distancia parte izda	left:10px		(Si position es static no tiene efecto)
+	float				Modifica el pos normal	float:left		(Si position es absolute no tiene efecto)
+						desplazandolo
+						left, right, none
+	clear				Indica los lados donde	clear:both 
+						el float es prohibido		
+						right, left,both, none
+	display				Define como mostrar un	display:block
+						determinado elto. caja	
+						inline, block, list-item
+						none
+	z-index				nivel de profundidad	z-index:2
+	visibility			Determina su visualiz.	visibility:
+						visible, hidden, collapse
+
+identificadores  Para diseños exclusivos de etiquetas
+class			 Para utilizarlo en todos los elementos HTML
+pseudoclases	 Permiten clasificar elementos HTML según el estado en el que se encuentran
+
+   a:visited Vinculo visitado
+   a:hover   Vínculo donde está el ratón
+   a:link    Vínculo no visitado
+   a:focus   Vínculo seleccionado por teclado
+   a:active  Vínculo que recibe el click
+-->
