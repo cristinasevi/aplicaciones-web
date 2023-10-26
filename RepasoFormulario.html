@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>RepasoFormulario.html</title>
+    <link rel="stylesheet" type="text/css" href="repasoformulario.css">
+</head>
+
+<body>
+    <style>
+        * {
+            font-family: Arial;
+            font-size: 10pt;
+        }
+
+        table {
+            border: 1px solid black
+        }
+    </style>
+    <form>
+        <table width="50%" align="center" border="0" cellpadding="5">
+            <tr>
+                <td colspan="2">
+                    <h3>Señor(a) Registrador(a) de Personas Jurídicas:</h3>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <ol>
+                        <li>De manera atenta me dirijo a usted con el propósito de solicitar la inscripción
+                            de:<br><b>(Marque con una "X" lo requerido)</b></b></li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <table width="100%" border="1">
+                        <tr>
+                            <td><b>Nombramiento</b> <input type="radio" name="opcion1" id="opcion1"></td>
+                            <td><b>Cancelación de Nombramiento</b> <input type="radio" name="opcion1" id="opcion1"></td>
+                        </tr>
+                        <tr>
+                            <td><b>Mandato</b> <input type="radio" name="opcion2" id="opcion2"></td>
+                            <td><b>Revocatoria de Mandato</b> <input type="radio" name="opcion2" id="opcion2"></td>
+                        </tr>
+                        <tr>
+                            <td><b>Rectificación</b> <input type="radio" name="opcion3" id="opcion3"></td>
+                            <td><b>Reposición</b> <input type="radio" name="opcion3" id="opcion3"></td>
+                        </tr>
+                        <tr>
+                            <td><b>Modificación</b> <input type="radio" name="opcion4" id="opcion4"></td>
+                            <td><b>Disolución</b> <input type="radio" name="opcion4" id="opcion4"></td>
+                        </tr>
+                        <tr>
+                            <td><b>Transformación / Fusión</b> <input type="radio" name="opcion5" id="opcion5"></td>
+                            <td><b>Anotación</b> <input type="radio" name="opcion5" id="opcion5"></td>
+                        </tr>
+                        <tr>
+                            <td><b>2do. Razonamiento</b> <input type="radio" name="opcion6" id="opcion6"></td>
+                            <td><b>Asiento Extemporáneo</b> <input type="radio" name="opcion6" id="opcion6"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <ol start="2">
+                        <li>Denominación de la entidad: (<b>debe ser como la razón de inscripción</b>)</li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <textarea rows="6" cols="100%" name="denominación" id="denominación" required></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <ul>
+                        <li>Observaciones:</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <textarea rows="6" cols="100%" name="obs" id="obs"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <ol start="3">
+                        <li><b>Datos Registrales:</b></li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <td>Partida: <input type="text" name="partida" id="partida" maxlenght="30" size="30" required></td>
+                <td>Folio: <input type="text" name="folio" id="folio" maxlenght="30" size="30" required></td>
+            </tr>
+            <tr>
+                <td>Nº Libro: <input type="number" name="numerolibro" id="numerolibro" maxlenght="30" size="30"
+                        required></td>
+                <td>Nombre del Libro: <input type="text" name="nombrelibro" id="nombrelibro" maxlenght="30" size="30"
+                        required>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <b>Lugar de registro:</b>
+                </td>
+            </tr>
+            <tr>
+                <td><b>REPEJU</b> <input type="radio" name="lugar" id="lugar"></td>
+                <td><b>REGISTRO CIVIL</b> <input type="radio" name="lugar" id="lugar">(Llenar <b>los dos</b> campos
+                    <b>siguientes </b>solo si pertenece a un registro civil)
+                </td>
+            </tr>
+            <tr>
+                <td>Municipio: <input type="text" name="municipio" id="municipio" maxlenght="25" size="25"></td>
+                <td>Departamento: <input type="text" name="departamento" id="departamento" maxlenght="30" size="30">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <table width="100%" border="1">
+                        <tr>
+                            <td>
+                                <ol start="4">
+                                    <li><b>Nombre del Representante Legal:</b></li>
+                                </ol>
+                            </td>
+                            <td align="center"><b>DPI / CUI</b></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" name="representante" id="representante" size="50%"
+                                    required></textarea>
+                            </td>
+                            <td>
+                                <input type="text" name="dpi" id="dpi" size="50%" required></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            <tr>
+                <td colspan="2">
+                    <table border="1">
+                        <tr>
+                            <td align="center"><b>Correo electrónico</b></td>
+                            <td align="center"><b>Número de teléfono</b></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="email" name="correo" id="correo" size="50%" required></textarea>
+                            </td>
+                            <td>
+                                <input type="tel" name="telf" id="telf" size="50%" required></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <table class="tabla1" border="1">
+                        <tr>
+                            <td>
+                                <ol start="5">
+                                    <li><b>SIN AUXILIO DE ABOGADO</b></li>
+                                </ol>
+                            </td>
+                            <td align="center"><b>CON AUXILIO DE ABOGADO (con timbre y sello)</b></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <textarea rows="2" cols="50%" name="sin_auxilio" id="sin_auxilio"
+                                    placeholder="F: Representante legal"></textarea>
+                            </td>
+                            <td>
+                                <textarea rows="2" cols="30%" name="con_auxilio" id="con_auxilio"
+                                    placeholder="F: firma y sello"></textarea><textarea rows="2" cols="18%"
+                                    name="con_auxilio" id="con_auxilio" placeholder="timbre y sello"></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Enviar" class="obligatorio">
+                    <input type="reset" value="Borrar">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

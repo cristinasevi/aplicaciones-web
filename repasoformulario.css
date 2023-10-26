@@ -1,0 +1,25 @@
+td {
+    font-family: Verdana;
+    font-size: 9pt;
+}
+
+.tabla1 {
+    background-color: lightgray;
+    border: 3px solid black;
+}
+
+input, textarea {
+    font-family: Verdana;
+    font-size: 11pt;
+}
+
+body {
+    background-image: url("./imágenes/logoSalesianos.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.obligatorio {
+    color: red
+}
