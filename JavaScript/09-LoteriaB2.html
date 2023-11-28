@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09-LoteríaB2.html</title>
+    <script language="JavaScript">
+        var a = 0;
+        imagenes = new Array();
+        imagenes = new Array();
+        imagenes[1] = "./imágenes/numeros/0.png";
+        imagenes[2] = "./imágenes/numeros/1.png";
+        imagenes[3] = "./imágenes/numeros/2.png";
+        imagenes[4] = "./imágenes/numeros/3.png";
+        imagenes[5] = "./imágenes/numeros/4.png";
+        imagenes[6] = "./imágenes/numeros/5.png";
+        imagenes[7] = "./imágenes/numeros/6.png";
+        imagenes[8] = "./imágenes/numeros/7.png";
+        imagenes[9] = "./imágenes/numeros/8.png";
+        imagenes[10] = "./imágenes/numeros/9.png";
+        function visor1() {
+            a = Math.floor(Math.random() * 10) + 1;
+            primero.src = imagenes[a];
+            temp1 = setTimeout("visor1()", 50);
+        }
+        function visor2() {
+            a = Math.floor(Math.random() * 10) + 1;
+            segundo.src = imagenes[a];
+            temp2 = setTimeout("visor2()", 50);
+        }
+        function visor3() {
+            a = Math.floor(Math.random() * 10) + 1;
+            tercero.src = imagenes[a];
+            temp3 = setTimeout("visor3()", 50);
+        }
+        function visor4() {
+            a = Math.floor(Math.random() * 10) + 1;
+            cuarto.src = imagenes[a];
+            temp4 = setTimeout("visor4()", 50);
+        }
+        function visor5() {
+            a = Math.floor(Math.random() * 10) + 1;
+            quinto.src = imagenes[a];
+            temp5 = setTimeout("visor5()", 50);
+        }
+        function parar(valor) {
+            if (valor == 1) {
+                clearTimeout(temp1);
+                para1.style.display = "none";
+            }
+            if (valor == 2) {
+                clearTimeout(temp2);
+                para2.style.display = "none";
+                para1.style.display = "";
+            }
+            if (valor == 3) {
+                clearTimeout(temp3);
+                para3.style.display = "none";
+                para2.style.display = "";
+            }
+            if (valor == 4) {
+                clearTimeout(temp4);
+                para4.style.display = "none";
+                para3.style.display = "";
+            }
+            if (valor == 5) {
+                clearTimeout(temp5);
+                para5.style.display = "none";
+                para4.style.display = "";
+            }
+        }
+    </script>
+</head>
+
+<body align="center" background="./imágenes/numeros/navidad.jpg" onload="visor1(),visor2(),visor3(),visor4(),visor5()">
+    <table align="center" width="60%" cellpadding="40" border="0">
+        <tr>
+            <td>
+                <input style="display: none;" type="button" value="PARAR" onclick="parar(1)" name="para1" id="para1">
+            </td>
+            <td>
+                <input style="display: none;" type="button" value="PARAR" onclick="parar(2)" name="para2" id="para2">
+            </td>
+            <td>
+                <input style="display: none;" type="button" value="PARAR" onclick="parar(3)" name="para3" id="para3">
+            </td>
+            <td>
+                <input style="display: none;" type="button" value="PARAR" onclick="parar(4)" name="para4" id="para4">
+            </td>
+            <td>
+                <input type="button" value="PARAR" onclick="parar(5)" name="para5" id="para5">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="./imágenes/numeros/0.png" name="primero" id="primero" width="100">
+            </td>
+            <td>
+                <img src="./imágenes/numeros/0.png" name="segundo" id="segundo" width="100">
+            </td>
+            <td>
+                <img src="./imágenes/numeros/0.png" name="tercero" id="tercero" width="100">
+            </td>
+            <td>
+                <img src="./imágenes/numeros/0.png" name="cuarto" id="cuarto" width="100">
+            </td>
+            <td>
+                <img src="./imágenes/numeros/0.png" name="quinto" id="quinto" width="100">
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

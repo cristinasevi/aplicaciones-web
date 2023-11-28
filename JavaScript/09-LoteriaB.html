@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09-LoteríaB.html</title>
+    <script language="JavaScript">
+        var a = 0;
+        imagenes = new Array();
+        imagenes[1] = "./imágenes/numeros/0.png";
+        imagenes[2] = "./imágenes/numeros/1.png";
+        imagenes[3] = "./imágenes/numeros/2.png";
+        imagenes[4] = "./imágenes/numeros/3.png";
+        imagenes[5] = "./imágenes/numeros/4.png";
+        imagenes[6] = "./imágenes/numeros/5.png";
+        imagenes[7] = "./imágenes/numeros/6.png";
+        imagenes[8] = "./imágenes/numeros/7.png";
+        imagenes[9] = "./imágenes/numeros/8.png";
+        imagenes[10] = "./imágenes/numeros/9.png";
+        function visor1() {
+            a = Math.floor(Math.random() * 10) + 1;
+            primero.src = imagenes[a];
+            temp1 = setTimeout("visor1()", 100);
+            arrancar.style.display = "none";
+            para.style.display = "";
+        }
+        function visor2() {
+            a = Math.floor(Math.random() * 10) + 1;
+            segundo.src = imagenes[a];
+            temp2 = setTimeout("visor2()", 100);
+            arrancar.style.display = "none";
+            para.style.display = "";
+        }
+        function visor3() {
+            a = Math.floor(Math.random() * 10) + 1;
+            tercero.src = imagenes[a];
+            temp3 = setTimeout("visor3()", 100);
+            arrancar.style.display = "none";
+            para.style.display = "";
+        }
+        function visor4() {
+            a = Math.floor(Math.random() * 10) + 1;
+            cuarto.src = imagenes[a];
+            temp4 = setTimeout("visor4()", 100);
+            arrancar.style.display = "none";
+            para.style.display = "";
+        }
+        function visor5() {
+            a = Math.floor(Math.random() * 10) + 1;
+            quinto.src = imagenes[a];
+            temp5 = setTimeout("visor5()", 100);
+            arrancar.style.display = "none";
+            para.style.display = "";
+        }
+        function parar() {
+            clearTimeout(temp1);
+            clearTimeout(temp2);
+            clearTimeout(temp3);
+            clearTimeout(temp4);
+            clearTimeout(temp5);
+            arrancar.style.display = ""
+            para.style.display = "none"
+        }
+    </script>
+</head>
+
+<body align="center" background="./imágenes/numeros/navidad.jpg">
+    <table align="center" width="60%" cellpadding="40" border="1">
+        <tr>
+            <td colspan="5">
+                <input type="button" value="GENERAR" onclick="visor1(),visor2(),visor3(),visor4(),visor5()"
+                    name="arrancar" id="arrancar">
+                <input style="display: none;" type="button" value="PARAR" onclick="parar()" name="para" id="para">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="./imágenes/numeros/0.png" name="primero" id="primero" width="100">
+            </td>
+            <td>
+                <img src="./imágenes/numeros/0.png" name="segundo" id="segundo" width="100">
+            </td>
+            <td>
+                <img src="./imágenes/numeros/0.png" name="tercero" id="tercero" width="100">
+            </td>
+            <td>
+                <img src="./imágenes/numeros/0.png" name="cuarto" id="cuarto" width="100">
+            </td>
+            <td>
+                <img src="./imágenes/numeros/0.png" name="quinto" id="quinto" width="100">
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>08-Lotería.html</title>
+  <link rel="stylesheet" type="text/css" href="estilos.css">
+  <script language="JavaScript">
+    var a = 1;
+    var b = 1;
+    var c = 1;
+    var d = 1;
+    var e = 1;
+    imagenes = new Array();
+    imagenes[1] = "./imágenes/numeros/numero0.svg";
+    imagenes[2] = "./imágenes/numeros/numero1.jpg";
+    imagenes[3] = "./imágenes/numeros/numero2.jpg";
+    imagenes[4] = "./imágenes/numeros/numero3.jpg";
+    imagenes[5] = "./imágenes/numeros/numero4.png";
+    imagenes[6] = "./imágenes/numeros/numero5.jpg";
+    imagenes[7] = "./imágenes/numeros/numero6.png";
+    imagenes[8] = "./imágenes/numeros/numero7.jpg";
+    imagenes[9] = "./imágenes/numeros/numero8.jfif";
+    imagenes[10] = "./imágenes/numeros/numero9.jfif";
+    function arrancar() {
+      a = Math.floor(Math.random() * 10) + 1;
+      numero1.src = imagenes[a];
+      
+      b = Math.floor(Math.random() * 10) + 1;
+      numero2.src = imagenes[b];
+      
+      c = Math.floor(Math.random() * 10) + 1;
+      numero3.src = imagenes[c];
+      
+      d = Math.floor(Math.random() * 10) + 1;
+      numero4.src = imagenes[d];
+     
+      e = Math.floor(Math.random() * 10) + 1;
+      numero5.src = imagenes[e];
+      
+      temp1 = setTimeout("arrancar()", 500);
+      botonarrancar.style.display = "none";
+      botonparar.style.display = "";
+    }
+    function parar() {
+      clearTimeout(temp1);
+      botonarrancar.style.display = "";
+      botonparar.style.display = "none";
+    }
+  </script>
+</head>
+<!-- Que cargue los numeros nada mas cargar la pagina -->
+
+<body onload="arrancar()">
+  <h1 align="center">Lotería</h1>
+  <table align="center" border="0">
+    <tr>
+      <td><img name="numero1" id="numero1" src="" width="200"></td>
+      <td><img name="numero2" id="numero2" src="" width="200"></td>
+      <td><img name="numero3" id="numero3" src="" width="200"></td>
+      <td><img name="numero4" id="numero4" src="" width="200"></td>
+      <td><img name="numero5" id="numero5" src="" width="200"></td>
+    </tr>
+  </table>
+  <br><br>
+  <div align="center">
+    <input name="botonarrancar" id="botonarrancar" type="button" value="Arrancar" onclick="arrancar()">
+    <input name="botonparar" id="botonparar" type="button" value="Parar" onclick="parar()" style="display:none">
+  </div>
+</body>
+
+</html>
