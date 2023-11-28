@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>02-Eventos.html</title>
+    <script language="JavaScript">
+        function aumentar() {
+            //if(document.getElementById("logo").width > 400)
+            if (logo.width > 500) {
+                window.alert("No se puede ampliar más la imagen")
+            }
+            else {
+                logo.width = logo.width + 10
+            }
+        }
+        function disminuir() {
+            if (logo.width < 200) {
+                window.alert("No se puede disminuir más la imagen")
+            }
+            else {
+                logo.width = logo.width - 10
+            }
+        }
+    </script>
+</head>
+
+<body bgcolor="lightgray" name="cuerpo" id="cuerpo"> <!-- Atributo de estilos -->
+    <input type="button" value="+" onclick="aumentar()">
+    <input type="button" value="-" onclick="disminuir()">
+    <br><br>
+    <table border="1" style="cursor:pointer">
+        <tr>
+            <td bgcolor="#ff0000" onclick="cuerpo.bgColor=this.bgColor">Rojo</td>
+            <td bgcolor="#339933" onclick="cuerpo.bgColor=this.bgColor">Verde</td>
+            <td bgcolor="#6666ff" onclick="cuerpo.bgColor=this.bgColor">Azul</td>
+        </tr>
+    </table>
+    <table border="1">
+        <tr>
+            <td bgcolor="#ff0000" onclick="cuerpo.style.backgroundcolor=this.bgColor">Rojo</td>
+            <td bgcolor="#339933" onclick="cuerpo.style.backgroundcolor=this.bgColor">Verde</td>
+            <td bgcolor="#6666ff" onclick="cuerpo.style.backgroundcolor=this.bgColor">Azul</td>
+        </tr>
+    </table>
+    <br><br>
+    <select name="imagen" id="imagen" onchange="logo.src= imagen.value" onchange="logo.src= this.value">
+        <!-- En los value del desplegable se le da la ruta de la imagen para que cambie-->
+        <option value="" selected>Elige imagen</option>
+        <option value="./imágenes/logoSalesianos.png">Logo</option>
+        <option value="./imágenes/patio.jpg">Patio</option>
+        <option value="./imágenes/zaragoza.jpg">Zaragoza</option>
+        <option value="./imágenes/tiempo.jpg">Tiempo</option>
+    </select>
+    <br><br>
+    <img src="./imágenes/logoSalesianos.png" name="logo" id="logo">
+</body>
+
+</html>
+
+<!-- 
+Si no tiene name el objeto select se puede poner:
+onchange="logo.src= this.value"
+ -->
