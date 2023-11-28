@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>03-NoticiasB.html</title>
+    <script language="JavaScript">
+        function cambiar(valor) {
+            if (valor == 1) {
+                español.style.display = "";
+                inglés.style.display = "none";
+                alemán.style.display = "none";
+            }
+            if (valor == 2) {
+                español.style.display = "none";
+                inglés.style.display = "";
+                alemán.style.display = "none";
+            }
+            if (valor == 3) {
+                español.style.display = "none";
+                inglés.style.display = "none";
+                alemán.style.display = "";
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <table align="center" width="50%" border="1">
+        <tr>
+            <td align="center">
+                <img src="./imágenes/españa.jpg" width="50" onmouseover="cambiar(1)" style="cursor:pointer">
+                <img src="./imágenes/reino_unido.png" width="50" onmouseover="cambiar(2)" style="cursor:pointer">
+                <img src="./imágenes/alemania.png" width="50" onmouseover="cambiar(3)" style="cursor:pointer">
+            </td>
+        </tr>
+        <tr>
+            <td name="español" id="español">
+
+                <div>
+                    <h2>Primera Noticia</h2>
+
+                    Zaragoza entrega a la Federación de Fútbol la documentación de la nueva Romareda
+                    La carrera del Mundial 2030, que organizarán España, Portugal y Marruecos, sigue quemando etapas.
+                    Tal y como se había
+                    comprometido, Zaragoza envió este lunes por correo electrónico a la Real Federación Española de
+                    Fútbol (RFEF) el
+                    protocolo firmado el pasado viernes para construir el nuevo estadio.
+
+                    Así lo confirmó el concejal de Urbanismo e Infraestructuras e interlocutor de la candidatura de la
+                    capital, Víctor
+                    Serrano, que además anunció que el organismo federativo tiene previsto volver a reunirse con los
+                    representantes de las
+                    ciudades que aspiran a ser sedes y que tienen pendiente de construir el estadio, entre ellas
+                    Zaragoza.
+
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="display:none" name="inglés" id="inglés">
+
+                <!-- style="display:none" oculta  el div y lo reorganiza, style="visibility:hidden" respeta el espacio y lo oculta-->
+                <div>
+                    <h2>Second New</h2>
+                    Zaragoza delivers to the Football Federation the documentation of the new Romareda
+                    The 2030 World Cup race, which Spain, Portugal and Morocco will organize, continues to burn stages.
+                    Just as it had been
+                    committed, Zaragoza sent this Monday by email to the Royal Spanish Football Federation (RFEF) the
+                    protocol signed last Friday to build the new stadium.
+
+                    This was confirmed by the Councilor for Urban Planning and Infrastructure and interlocutor of the
+                    capital's candidacy, Víctor
+                    Serrano, who also announced that the federative body plans to meet again with the representatives of
+                    the
+                    cities that aspire to be venues and that have yet to build the stadium, including Zaragoza.
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="display:none" name="alemán" id="alemán">
+                <div>
+                    <h2>Dritte Nachrichten</h2>
+                    Zaragoza übergibt dem Fußballverband die Dokumentation der neuen Romareda
+                    Das Weltcup-Rennen 2030, das Spanien, Portugal und Marokko ausrichten werden, brennt weiterhin auf
+                    Etappen. So wie es gewesen war
+                    verpflichtet, schickte Zaragoza diesen Montag per E-Mail an den Königlich Spanischen Fußballverband
+                    (RFEF).
+                    Am vergangenen Freitag wurde das Protokoll zum Bau des neuen Stadions unterzeichnet.
+
+                    Dies wurde vom Stadtrat für Stadtplanung und Infrastruktur und Gesprächspartner der
+                    Hauptstadtkandidatur, Víctor, bestätigt
+                    Serrano, der auch ankündigte, dass das föderative Gremium ein erneutes Treffen mit den Vertretern
+                    der Föderation plant
+                    Städte, die Austragungsorte sein wollen und das Stadion noch nicht gebaut haben, darunter Saragossa.
+                </div>
+            </td>
+        </tr>
+
+    </table>
+</body>
+
+</html>
