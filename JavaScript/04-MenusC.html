@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>04-MenuC.html</title>
+    <script language="JavaScript">
+    //document.getElementById("menuGM").display="";
+        function cambiar(seccion) 
+        {
+            if (seccion.style.display=="none") 
+            {
+                seccion.style.display="";
+            }
+            else 
+            {
+                seccion.style.display="none";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Si se manda un objeto es sin comillas: onclick="cambiar(menuGM)"
+    Si se manda un nombre es con comillas-->
+    <table width="30%" align="left" border="1">
+        <tr>
+            <td align="center" onclick="cambiar(menuGM)" style="cursor:pointer">Ciclos formativos Grado Medio
+            </td>
+        </tr>
+        <tr>
+            <td name="menuGM" id="menuGM" style="display:none">
+                <ul>
+                    <li>Informática</li>
+                    <li>Automoción</li>
+                    <li>Mecanizado</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" onclick="cambiar(menuGS)" style="cursor:pointer">Ciclos formativos Grado
+                Superior</td>
+        </tr>
+        <tr>
+            <td name="menuGS" id="menuGS" style="display:none">
+                <ul>
+                    <li>Informática</li>
+                    <li>Robótica</li>
+                    <li>Mecanizado</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" onclick="cambiar(bach)" style="cursor:pointer">Bachillerato</td>
+        </tr>
+        <tr>
+            <td name="bach" id="bach" style="display:none">
+                <ul>
+                    <li>Tecnológico</li>
+                    <li>Humanidades</li>
+                    <li>Sociales</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

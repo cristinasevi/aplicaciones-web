@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>04-Menus.html</title>
+    <script language="JavaScript">
+    //document.getElementById("menuGM").display="";
+        function gradoMedio() 
+        {
+            if (menuGM.style.display=="none") 
+            {
+                menuGM.style.display="";
+            }
+            else 
+            {
+                menuGM.style.display="none";
+            }
+        }
+        function gradoSuperior() 
+        {
+            if (menuGS.style.display=="none") 
+            {
+                menuGS.style.display="";
+            }
+            else 
+            {
+                menuGS.style.display="none";
+            }
+        }
+        function bachiller() 
+        {
+            if (bach.style.display=="none") 
+            {
+                bach.style.display="";
+            }
+            else 
+            {
+                bach.style.display="none";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <table width="30%" align="left" border="1">
+        <tr>
+            <td align="center" onclick="gradoMedio()" style="cursor:pointer">Ciclos formativos Grado Medio
+            </td>
+        </tr>
+        <tr>
+            <td name="menuGM" id="menuGM" style="display:none">
+                <ul>
+                    <li>Informática</li>
+                    <li>Automoción</li>
+                    <li>Mecanizado</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" onclick="gradoSuperior()" style="cursor:pointer">Ciclos formativos Grado
+                Superior</td>
+        </tr>
+        <tr>
+            <td name="menuGS" id="menuGS" style="display:none">
+                <ul>
+                    <li>Informática</li>
+                    <li>Robótica</li>
+                    <li>Mecanizado</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" onclick="bachiller()" style="cursor:pointer">Bachillerato</td>
+        </tr>
+        <tr>
+            <td name="bach" id="bach" style="display:none">
+                <ul>
+                    <li>Tecnológico</li>
+                    <li>Humanidades</li>
+                    <li>Sociales</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

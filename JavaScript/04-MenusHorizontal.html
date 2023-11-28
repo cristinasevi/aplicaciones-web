@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>04-MenuHorizontal.html</title>
+    <script language="JavaScript">
+    //document.getElementById("menuGM").display="";
+        function cambiar(seccion,ocultar1,ocultar2) 
+        {
+            ocultar1.style.visibility="hidden";
+            ocultar2.style.visibility="hidden";
+            if (seccion.style.visibility == "hidden") 
+            {
+                seccion.style.visibility="inherit";
+            }
+            else 
+            {
+                seccion.style.visibility="hidden";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Si se manda un objeto es sin comillas: onclick="cambiar(menuGM)"
+    Si se manda un nombre es con comillas-->
+    <!-- Se pueden dar más de un valor a onclick="cambiar(menuGM,menuGS,bach)" , separando los valores por comas -->
+    <table width="80%" align="center" border="1" cellpadding="5" cellspacing="5">
+        <tr>
+            <td align="center" onclick="cambiar(menuGM, menuGS, bach)" style="cursor:pointer">Ciclos formativos Grado Medio
+            </td>
+            <td align="center" onclick="cambiar(menuGS, menuGM, bach)" style="cursor:pointer">Ciclos formativos Grado
+                Superior</td>
+            <td align="center" onclick="cambiar(bach, menuGM, menuGS)" style="cursor:pointer">Bachillerato</td>
+        </tr>
+        <tr>
+            <td name="menuGM" id="menuGM" style="visibility:hidden">
+                <ul>
+                    <li>Informática</li>
+                    <li>Automoción</li>
+                    <li>Mecanizado</li>
+                </ul>
+            </td>
+            <td name="menuGS" id="menuGS" style="visibility:hidden">
+                <ul>
+                    <li>Informática</li>
+                    <li>Robótica</li>
+                    <li>Mecanizado</li>
+                </ul>
+            </td>
+            <td name="bach" id="bach" style="visibility:hidden">
+                <ul>
+                    <li>Tecnológico</li>
+                    <li>Humanidades</li>
+                    <li>Sociales</li>
+                </ul>
+            </td>
+        </tr>
+    <!-- visibility: hidden, hace que se reserven esos espacios y no se ocupen -->
+    </table>
+</body>
+
+</html>
