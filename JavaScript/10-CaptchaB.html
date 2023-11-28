@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>09-CaptchaB.html</title>
+  <script language="JavaScript">
+// Un ejercicio de captcha similar al de Saludinforma o un ejercicio con una tabla
+// de imágenes donde el usuario tenga que marcar algunas de ellas para superarlo.
+    frases = new Array();
+    frases[1] = "<h3>Zuera, Caspe, Calamocha, <font color='red'>Jaca</font>, Biel</h3>";
+    frases[2] = "<h3>Albarracín, <font color='red'>Aínsa</font>, Alquézar, Sos del Rey Católico</h3>";
+    frases[3] = "<h3>Calatayud, Alcañiz, <font color='red'>La Almunia</font>, Barbastro, Fraga";
+    frases[4] = "<h3>Monzón, Cuarte de Huerva, Jaraba, <font color='red'>Borja</font></h3>";
+    frases[5] = "<h3>Ejea de los Caballeros, Sabiñánigo, <font color='red'>Broto</font>, Alagón, Ayerbe";
+    frases[6] = "<h3>Bielsa, Binaced, Benasque, <font color='red'>Canfranc</font>, Chia</h3>";
+    frases[7] = "<h3><font color='red'>Fiscal</font>, Fraga, Graus, Loarre, Monzon";
+    frases[8] = "<h3>Naval, Peralta de Calasanz, Peñalba, Torla-Ordesa, <font color='red'>Villanua</font</h3>";
+    frases[9] = "<h3>Villanova, Tramaced, <font color='red'>Tolva</font>, Sopeira, Sesue, Sesa</h3>";
+    frases[10] = "<h3>Seira, <font color='red'>Sena</font>, Teruel, Huesca</h3>";
+
+    texto = new Array();
+    texto[1] = "Jaca";
+    texto[2] = "Aínsa";
+    texto[3] = "La Almunia";
+    texto[4] = "Borja";
+    texto[5] = "Broto";
+    texto[6] = "Canfranc";
+    texto[7] = "Fiscal";
+    texto[8] = "Villanua";
+    texto[9] = "Tolva";
+    texto[10] = "Sena";
+
+    var a = 0;
+    var fallos = 0;
+    var intentos = 0;
+
+    function generar()
+    {
+      a =  Math.floor(Math.random()*10) + 1;
+      parrafo.innerHTML = frases[a];
+    }
+
+    function comprobar()
+    {
+      if (dato.value==texto[a])
+      {
+        // window.alert("Has acertado")
+        window.open("http://zaragoza.salesianos.edu");
+      }
+      else
+      {
+        // Controlar intentos. SI en 3 intentos no lo ha conseguido... "hacer algo".
+        fallos = fallos + 1; // fallos++
+        // window.alert("Has fallado, inténtalo de nuevo.");
+        intentos = 3 - fallos;
+        mensaje.innerHTML="Has fallado. Te quedan " + intentos + " intentos";
+        dato.value="";
+        if (fallos==3)
+        {
+          info.style.display="none";
+          mensaje.innerHTML="No has conseguido tu objetivo. Reinicia la página"
+        }
+      }
+    }
+
+    function cambiar() // Botón para volver a generar el captcha.
+    {
+    a =  Math.floor(Math.random()*10) + 1;
+      parrafo.innerHTML = frases[a];
+    }
+</script>
+</head>
+<body onload="generar()">
+  <div name="info" id="info">
+    <p name="parrafo" id="parrafo"></p>
+    <br>
+    <input type="text" name="dato" id="dato">
+    <input type="button" value="Comprobar" onclick="comprobar()">
+    <input type="button" value="Cambiar" onclick="cambiar()">
+  </div>
+  <h2 name="mensaje" id="mensaje"></h2>
+  </body>
+</html>

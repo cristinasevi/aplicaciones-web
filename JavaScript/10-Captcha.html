@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>09-Captcha.html</title>
+  <script language="JavaScript">
+    imagenes = new Array();
+    imagenes[1] = "./imágenes/captcha/captcha1.jpg";
+    imagenes[2] = "./imágenes/captcha/captcha2.jpg";
+    imagenes[3] = "./imágenes/captcha/captcha3.jpg";
+    imagenes[4] = "./imágenes/captcha/captcha4.jpg";
+    imagenes[5] = "./imágenes/captcha/captcha5.jpg";
+    imagenes[6] = "./imágenes/captcha/captcha6.jpg";
+    imagenes[7] = "./imágenes/captcha/captcha7.jpg";
+    imagenes[8] = "./imágenes/captcha/captcha8.jpg";
+    imagenes[9] = "./imágenes/captcha/captcha9.jpg";
+    imagenes[10] = "./imágenes/captcha/captcha10.jpg";
+
+    palabra = new Array();
+    palabra[1] = "6HJH6CTN";
+    palabra[2] = "EXXTENHK";
+    palabra[3] = "XYHNXCDR";
+    palabra[4] = "qGphJD";
+    palabra[5] = "3nc9z";
+    palabra[6] = "2pvcb";
+    palabra[7] = "advses";
+    palabra[8] = "BMVHKY";
+    palabra[9] = "ZKW4";
+    palabra[10] = "944531";
+
+    var a = 0;
+    var fallos = 0;
+    var intentos = 0;
+
+    function generar()
+    {
+      a =  Math.floor(Math.random()*10) + 1;
+      foto.src = imagenes[a];
+    }
+
+    function comprobar()
+    {
+      if (dato.value==palabra[a])
+      {
+        // window.alert("Has acertado")
+        window.open("http://zaragoza.salesianos.edu");
+      }
+      else
+      {
+        // Controlar intentos. SI en 3 intentos no lo ha conseguido... "hacer algo".
+        fallos = fallos + 1; // fallos++
+        // window.alert("Has fallado, inténtalo de nuevo.");
+        intentos = 3 - fallos;
+        mensaje.innerHTML="Has fallado. Te quedan " + intentos + " intentos";
+        dato.value="";
+        if (fallos==3)
+        {
+          info.style.display="none";
+          mensaje.innerHTML="No has conseguido tu objetivo. Reinicia la página"
+        }
+      }
+    }
+
+    function cambiar() // Botón para volver a generar el captcha.
+    {
+      a =  Math.floor(Math.random()*10) + 1;
+      foto.src = imagenes[a];
+    }
+</script>
+</head>
+<body onload="generar()">
+  <div name="info" id="info">
+    <img name="foto" id="foto" src="" width="300">
+    <br>
+    <input type="text" name="dato" id="dato">
+    <input type="button" value="Comprobar" onclick="comprobar()">
+    <input type="button" value="Cambiar" onclick="cambiar()">
+  </div>
+  <h2 name="mensaje" id="mensaje"></h2>
+  </body>
+</html>
