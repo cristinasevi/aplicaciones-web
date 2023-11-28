@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>05-Arrays.html</title>
+  <script language="JavaScript">
+    var a = 1;
+    function visor()
+    {
+        a = a + 1;
+        if(a==1)
+        {
+            foto.src="./imágenes/logoSalesianos.png";
+        }
+        if(a==2)
+        {
+            foto.src="./imágenes/patio.jpg";
+        }
+        if(a==3)
+        {
+            foto.src="./imágenes/zaragoza.jpg";
+        }
+        if(a==4)
+        {
+            foto.src="./imágenes/tiempo.jpg";
+            a = 0;
+        }
+    }
+  </script>
+</head>
+ <body>
+    <input type="button" value="Cambiar" onclick="visor()">
+    <br>
+    <img name="foto" id="foto" src="./imágenes/logoSalesianos.png" width="200">  
+ </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>06-Aleatorio.html</title>
+  <script language="JavaScript">
+    var a = 1;
+    imagenes = new Array();
+    imagenes[1]="./imágenes/logoSalesianos.png";
+    imagenes[2]="./imágenes/patio.jpg";
+    imagenes[3]="./imágenes/zaragoza.jpg";
+    imagenes[4]="./imágenes/tiempo.jpg";
+    imagenes[5]="./imágenes/españa.jpg";
+    imagenes[6]="./imágenes/reino_unido.png";
+    imagenes[7]="./imágenes/alemania.png";
+    imagenes[8]="./imágenes/mapa.png";
+    imagenes[9]="./imágenes/mercadocentral.jpg";
+    imagenes[10]="./imágenes/mercadocentral1.jpg";
+    function visor()
+    {
+      a=Math.floor(Math.random()*10) + 1; 
+      foto.src=imagenes[a]
+    }
+  </script>
+</head>
+ <body>
+  <input type="button" value="Generar Aleatorio" onclick="visor()"> 
+<br>
+<img name="foto" id="foto" src="./imágenes/logoSalesianos.png" width="200"> 
+</body>
+</html>
