@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>07-Temporizador.html</title>
+  <script language="JavaScript">
+    var a = 1;
+    imagenes = new Array(); // Declarar un array
+    imagenes[1]="./imágenes/logoSalesianos.png";
+    imagenes[2]="./imágenes/patio.jpg";
+    imagenes[3]="./imágenes/zaragoza.jpg";
+    imagenes[4]="./imágenes/tiempo.jpg";
+    function arrancar()
+    {
+      a = a + 1;
+      foto.src=imagenes[a];
+      if(a==4)
+      {
+        a=0
+      }
+      temp1=setTimeout("arrancar()",100); 
+      // Llamada a un temporizador, llama a la función visor() y una vez pulsado el botón, las imagenes van cambiando cada X segundos. 
+      // El tiempo se mide en milisegundos, 1000 --> 1 seg
+      // Cada vez que le des a cambiar, va más rápido
+      botonarrancar.style.display="none";
+      botonparar.style.display="";
+    }
+    function parar()
+    {
+      clearTimeout(temp1);
+      botonarrancar.style.display="";
+      botonparar.style.display="none";
+    }
+    
+  </script>
+</head>
+ <body>
+    <input name="botonarrancar" id="botonarrancar" type="button" value="Arrancar" onclick="arrancar()">
+    <input name="botonparar" id="botonparar" type="button" value="Parar" onclick="parar()" style="display:none">
+    <br>
+    <img name="foto" id="foto" src="./imágenes/logoSalesianos.png" width="200">  
+ </body>
+</html>
