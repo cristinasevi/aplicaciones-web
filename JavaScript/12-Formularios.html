@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>12-Formularios.html</title>
+    <script language="JavaScript">
+        function comprobarClave() {
+            if (datos.clave.value != datos.clave2.value)
+            // if (document.getElementById("clave").value != document.getElementById("clave2").value) // != --> significa si es distinto
+            {
+                window.alert("Claves no coinciden");
+                datos.clave.focus();
+                datos.clave.select();
+                // focus --> si los datos no coinciden no te deja pasar
+                // select --> selecciona el campo para q sepas q lo tienes q cambiar
+            }
+        }
+        function comprobarEdad() {
+            if (datos.edad.value < 18) {
+                datos.obs.innerHTML = "La persona inscrita es menor de edad"
+            }
+            else {
+                datos.obs.innerHTML = "";
+            }
+        }
+        function comprobarPaís() { // && --> AND, || --> OR
+            // if (datos.país.value != 1)
+            if (datos.país.value == 2 || datos.país.value == 3 || datos.país.value == 4) {
+                window.alert("Nacionalidad extranjera");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Tienes q poner nombre al <form> para poder utilizar JavaScript -->
+    <form action="07-Fin.html" name="datos" id="datos">
+        <!-- action sirve para que cuando le des a enviar te lleva a la página que le indiques -->
+        <table align="center" width="50%" border="1" callpadding="5" cellspacing="5">
+            <tr>
+                <td colspan="2" align="center">
+                    <h2>FORMULARIO</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>Nombre y Apellidos</td>
+                <td><input type="text" name="nombre" id="nombre" placeholder="Máx. 40 caracteres" maxlenght="40"
+                        size="40"></td>
+                <!-- etiquetas name e id sirve para identificar -->
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td>
+                    <input type="password" name="clave" id="clave" placeholder="" maxlenght="10" size="10" required>
+                    &nbsp;&nbsp;
+                    <input type="password" name="clave2" id="clave2" placeholder="Repite password para verificar"
+                        maxlenght="10" size="25" required onblur="comprobarClave()">
+                </td>
+            </tr>
+            <tr>
+                <td>Edad</td>
+                <td><input type="number" name="edad" id="edad" step="1" placeholder="" onblur="comprobarEdad()"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="email" name="correo" id="correo" placeholder="" maxlenght="9" size="40" required></td>
+            </tr>
+            <tr>
+                <td>Teléfono</td>
+                <td><input type="tel" name="telf" id="telf" placeholder="" maxlenght="60" size="10" required></td>
+            </tr>
+            <tr>
+                <td>Color</td>
+                <td><input type="color" name="col" id="col" size="10"></td>
+            </tr>
+            <tr>
+                <td>Fecha de Matriculación</td>
+                <td><input type="date" name="fecha" id="fecha"></td>
+            </tr>
+            <tr>
+                <td>País</td>
+                <td>
+                    <select name="país" id="país" required onchange="comprobarPaís()">
+                        <option value="">Elige país</option>
+                        <option value="1" selected>España</option>
+                        <!-- selected para que aparezca como seleccionado desde el principio -->
+                        <option value="2">Alemania</option>
+                        <option value="3">Francia</option>
+                        <option value="4">Italia</option>
+                        <!-- En value="" se puede poner texto o un número Ej= value="España" o value="1" -->
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Sección Educativa</td>
+                <td>Infantil<input type="radio" name="sección" id="sección" value="Infantil">
+                    Primaria<input type="radio" name="sección" id="sección" value="Primaria">
+                    ESO<input type="radio" name="sección" id="sección" value="ESO">
+                    Bachillerato<input type="radio" name="sección" id="sección" value="Bachillerato">
+                    FP<input type="radio" name="sección" id="sección" value="FP">
+                </td>
+            </tr>
+            <tr>
+                <td>Actividades Extraescolares</td>
+                <td>
+                    Fútbol<input type="checkbox" name="extra" id="extra" value="Fútbol">
+                    Baloncesto<input type="checkbox" name="extra" id="extra" value="Baloncesto">
+                    Volley<input type="checkbox" name="extra" id="extra" value=" Volley">
+                    Gimnasia Rítmica<input type="checkbox" name="extra" id="extra" value="Gimnasia Rítmica">
+                    Inglés<input type="checkbox" name="extra" id="extra" value="Inglés">
+                </td>
+            </tr>
+            <tr>
+                <td>Imagen</td>
+                <td><input type="file" name="imagen" id="imagen"></td>
+            </tr>
+            <tr>
+                <td>Observaciones</td>
+                <td>
+                    <textarea rows="6" cols="50" name="obs" id="obs"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" value="Chequear">
+                    <input type="reset" value="Borrar">
+                    <input type="submit" value="Enviar">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
