@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+	<script language="JavaScript">
+		var a = 0;
+		logos = new Array()
+		logos[1] = "./imagenes/bsh.jpg";
+		logos[2] = "./imagenes/caf.jpg";
+		logos[3] = "./imagenes/ayuntamiento.png";
+		logos[4] = "./imagenes/dga.jpg";
+	
+		enlaces = new Array()
+		enlaces[1] = "https://www.bsh-group.com/es/";
+		enlaces[2] = "https://www.caf.net/es/trabaja-caf/trabaja-caf.php";
+		enlaces[3] = "https://www.zaragoza.es/sede/";
+		enlaces[4] = "https://www.aragon.es/";
+		function cargarpie(){
+			a = Math.floor(Math.random()*4)+1;
+			logo.src = logos[a];
+			enlace.href = enlaces[a];
+			temp1 = setTimeout("cargarpie()",500)
+		}
+
+		var c = 0;
+		var cambiar = 0;
+		var intentos = 0;
+		captcha = new Array()
+		captcha[1] = "./imagenes/captcha/captcha1.jpg";
+		captcha[2] = "./imagenes/captcha/captcha2.jpg";
+		captcha[3] = "./imagenes/captcha/captcha3.jpg";
+		captcha[4] = "./imagenes/captcha/captcha4.jpg";
+		captcha[5] = "./imagenes/captcha/captcha5.jpg";
+
+		palabra = new Array()
+		palabra[1] = "6HJH6CTN";
+    	palabra[2] = "EXXTENHK";
+   		palabra[3] = "XYHNXCDR";
+    	palabra[4] = "qGphJD";
+    	palabra[5] = "3nc9z";
+
+		function cargarcaptcha(){
+			c = Math.floor(Math.random()*5)+1;
+			imagencaptcha.src = captcha[c];
+		}
+
+		function cambiarcaptcha(){
+			c = Math.floor(Math.random()*5)+1;
+			imagencaptcha.src = captcha[c];
+			cambiar = cambiar + 1;
+			if (cambiar == 1){
+				botoncambiar.style.display="none";
+			}
+		}
+
+		function comprobarcaptcha(){
+			if (dato.value==palabra[c]){
+				info.style.display="";
+				peticioncaptcha.style.display="none";
+			}
+			else{
+				intentos = intentos + 1;
+				window.alert("Llevas " + intentos + " intentos.")
+				if (intentos==3){
+					window.alert("Imposible acceder a la encuesta por superar los intentos");
+					peticioncaptcha.style.display="none";
+				}
+			}
+		}
+	  </script>
+</head>
+<body onload="cargarpie(), cargarcaptcha()">
+<div class="contenedor" >
+	<div class="cabecera">
+		<img src="./imagenes/cabecera.jpg" border="0" usemap="#salesianos">
+		<map name="salesianos">
+			<area shape="rect" title="Salesianos" href="https://zaragoza.salesianos.edu" coords="20,26,78,84">
+		</map>
+		</div>
+		<div class="menu">
+			<ul>
+				<li><a href="./index.html"> Inicio</a></li>
+				<li><a href="./noticias.html"> Noticias</a></li>
+				<li><a href="./colabora.html"> Colabora</a></li>
+				<li><a href="./encuesta.html"> Encuesta</a></li>
+			</ul>
+		</div>
+	<div class="cuerpo">
+	  <div>
+		<!-- Incorporar la petición del CAPTCHA -->
+
+	  </div>
+	<div name="peticioncaptcha" id="peticioncaptcha">
+		<img src="" name="imagencaptcha" name="imagencaptcha" width="200px">
+		<input type="text" name="dato" id="dato">
+		<input type="button" value="Comprobar" name="botoncomprobar" id="botoncomprobar" onclick="comprobarcaptcha()">
+    	<input type="button" value="Cambiar" name="botoncambiar" id="botoncambiar" onclick="cambiarcaptcha()">
+	</div>
+	  <div name="info" id="info" style="display:none">
+		<table width="100%" border="1">
+			<tr>
+				<td colspan="4">Valora el servicio recibido en relación a la gestión realizada</td>
+			</tr>
+			<tr>
+				<td width="50%"></td>
+				<td align="center"><img src="./imagenes/muybien.png"></td>
+				<td align="center"><img src="./imagenes/bien.png"></td>
+				<td align="center"><img src="./imagenes/mal.png"></td>
+			</tr>
+			<tr>
+				<td>Rapidez en la respuesta</td>
+				<td><input type="radio" name="rapidez" id="rapidez" value="muybien"></td>
+				<td><input type="radio" name="rapidez" id="rapidez" value="bien"></td>
+				<td><input type="radio" name="rapidez" id="rapidez" value="mal"></td>
+			</tr>
+			<tr>
+				<td>Calidad del servicio</td>
+				<td><input type="radio" name="calidad" id="calidad" value="muybien"></td>
+				<td><input type="radio" name="calidad" id="calidad" value="bien"></td>
+				<td><input type="radio" name="calidad" id="calidad" value="mal"></td>
+			</tr>
+			<tr>
+				<td>Resolución de la incidencia</td>
+				<td><input type="radio" name="resolución" id="resolución" value="muybien"></td>
+				<td><input type="radio" name="resolución" id="resolución" value="bien"></td>
+				<td><input type="radio" name="resolución" id="resolución" value="mal"></td>
+			</tr>
+			<tr>
+				<td colspan="4" align="center"><a href="./index.html">Fin</a></td>
+			</tr>
+		</table>
+	  </div>
+	</div>
+
+	<div class="pie">
+			<a href="" name="enlace" id="enlace"><img src="" name="logo" id="logo"></a>
+	</div>
+
+</div>
+ 
+</body>
+</html>
+

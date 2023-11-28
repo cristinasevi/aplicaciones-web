@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> index.html</TITLE>
+  <link rel="stylesheet" type="text/css" href="estilos.css">
+  <script language="JavaScript">
+	var a = 0;
+	logos = new Array()
+	logos[1] = "./imagenes/bsh.jpg";
+	logos[2] = "./imagenes/caf.jpg";
+	logos[3] = "./imagenes/ayuntamiento.png";
+	logos[4] = "./imagenes/dga.jpg";
+
+	enlaces = new Array()
+	enlaces[1] = "https://www.bsh-group.com/es/";
+	enlaces[2] = "https://www.caf.net/es/trabaja-caf/trabaja-caf.php";
+	enlaces[3] = "https://www.zaragoza.es/sede/";
+	enlaces[4] = "https://www.aragon.es/";
+	function cargarpie(){
+		a = Math.floor(Math.random()*4)+1;
+		logo.src = logos[a];
+		webenlace.href = enlaces[a];
+		temp1 = setTimeout("cargarpie()",500)
+	}
+  </script>
+ </HEAD>
+<body onload="cargarpie()">
+<div class="contenedor" >
+	<div class="cabecera">
+		<img src="./imagenes/cabecera.jpg" border="0" usemap="#salesianos">
+		<map name="salesianos">
+			<area shape="rect" title="Salesianos" href="https://zaragoza.salesianos.edu" coords="20,26,78,84">
+		</map>
+	</div>
+	<div class="menu">
+		<ul>
+		<li><a href="./index.html"> Inicio</a></li>
+		<li><a href="./noticias.html"> Noticias</a></li>
+		<li><a href="./colabora.html"> Colabora</a></li>
+		<li><a href="./encuesta.html"> Encuesta</a></li>
+		</ul>
+	</div>
+	<div class="cuerpo">
+		El Colegio Salesiano Ntra. Sra. del Pilar de Zaragoza, ubicado en la C/ María Auxiliadora, 57, es un centro escolar privado concertado, de carácter Cristiano, popular y abierto, que comprende los niveles de Educación Infantil, Educación Primaria, Educación Secundaria Obligatoria, Bachillerato, Formación Básica y Ciclos Formativos de Grado Medio y Superior, y Formación Profesional Básica, sigue el estilo educativo de Don Bosco y tiene como objetivo fundamental, ofrecer a niños y jóvenes una educación integral de calidad, ayudándoles en la elección de su itinerario formativo, en su orientación laboral y en su formación humano-cristiana, siendo protagonistas, en un ambiente de familia, con la participación corresponsable de todos los miembros de la comunidad educativa.<br><br>
+
+		Todas las acciones promovidas en esta línea están destinadas a fomentar la calidad, mediante el refuerzo de su autonomía.
+	</div>
+	<div class="pie">
+			<a href="" name="webenlace" id="webenlace"><img src="" name="logo" id="logo"></a>
+	</div>
+
+</div>
+</BODY>
+</HTML>

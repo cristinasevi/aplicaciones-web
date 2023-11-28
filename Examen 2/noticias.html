@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> noticias.html </TITLE>
+  <link rel="stylesheet" type="text/css" href="estilos.css">
+  <script language="JavaScript">
+	var a = 0;
+	logos = new Array()
+	logos[1] = "./imagenes/bsh.jpg";
+	logos[2] = "./imagenes/caf.jpg";
+	logos[3] = "./imagenes/ayuntamiento.png";
+	logos[4] = "./imagenes/dga.jpg";
+
+	enlaces = new Array()
+	enlaces[1] = "https://www.bsh-group.com/es/";
+	enlaces[2] = "https://www.caf.net/es/trabaja-caf/trabaja-caf.php";
+	enlaces[3] = "https://www.zaragoza.es/sede/";
+	enlaces[4] = "https://www.aragon.es/";
+	function cargarpie(){
+		a = Math.floor(Math.random()*4)+1;
+		logo.src = logos[a];
+		enlace.href = enlaces[a];
+		temp1 = setTimeout("cargarpie()",500)
+	}
+
+	function cambiarnoticia(valor){
+		if (valor==1){
+			noticia1.style.display="";
+			noticia2.style.display="none";
+			noticia3.style.display="none";
+			noticia4.style.display="none";
+			noticia5.style.display="none";
+			noticia6.style.display="none";
+		}
+		if (valor==2){
+			noticia1.style.display="none";
+			noticia2.style.display="";
+			noticia3.style.display="none";
+			noticia4.style.display="none";
+			noticia5.style.display="none";
+			noticia6.style.display="none";
+		}
+		if (valor==3){
+			noticia1.style.display="none";
+			noticia2.style.display="none";
+			noticia3.style.display="";
+			noticia4.style.display="none";
+			noticia5.style.display="none";
+			noticia6.style.display="none";
+		}
+		if (valor==4){
+			noticia1.style.display="none";
+			noticia2.style.display="none";
+			noticia3.style.display="none";
+			noticia4.style.display="";
+			noticia5.style.display="none";
+			noticia6.style.display="none";
+		}
+		if (valor==5){
+			noticia1.style.display="none";
+			noticia2.style.display="none";
+			noticia3.style.display="none";
+			noticia4.style.display="none";
+			noticia5.style.display="";
+			noticia6.style.display="none";
+		}
+		if (valor==6){
+			noticia1.style.display="none";
+			noticia2.style.display="none";
+			noticia3.style.display="none";
+			noticia4.style.display="none";
+			noticia5.style.display="none";
+			noticia6.style.display="";
+		}
+	}
+  </script>
+</HEAD>
+
+<BODY onload="cargarpie()">
+<div class="contenedor" >
+	<div class="cabecera">
+		<img src="./imagenes/cabecera.jpg" border="0" usemap="#salesianos">
+		<map name="salesianos">
+			<area shape="rect" title="Salesianos" href="https://zaragoza.salesianos.edu" coords="20,26,78,84">
+		</map>
+	</div>
+	<div class="menu">
+		<ul>
+		<li><a href="./index.html"> Inicio</a></li>
+		<li><a href="./noticias.html"> Noticias</a></li>
+		<li><a href="./colabora.html"> Colabora</a></li>
+		<li><a href="./encuesta.html"> Encuesta</a></li>
+		</ul>
+	</div>
+	<div class="cuerpo">
+		<!-- Tabla para elegir la presentacion de noticias -->
+		<table border="1" cellpadding="5" cellspacing="5">
+			<tr>
+				<td onclick="cambiarnoticia(1)">Noticia 1</td>
+				<td onclick="cambiarnoticia(2)">Noticia 2</td>
+				<td onclick="cambiarnoticia(3)">Noticia 3</td>
+				<td onclick="cambiarnoticia(4)">Noticia 4</td>
+				<td onclick="cambiarnoticia(5)">Noticia 5</td>
+				<td onclick="cambiarnoticia(6)">Noticia 6</td>
+			</tr>
+		</table>
+		<div name="noticia1" id="noticia1">
+			<h2>Noticia 1</h2>
+			<p>
+			Estas jornadas son fundamentales para compartir con los compa�eros y el tutor en un ambiente diferente al aula, en el que es posible un encuentro personal y de confianza, promoviendo la educaci�n en nuestros valores t�picos salesianos a trav�s de actividades l�dicas, formativas y celebrativas.
+			<br>
+			En un ambiente lleno de alegr�a y compa�erismo se han ido sucediendo estas jornadas organizadas por niveles educativos durante la �ltima semana de septiembre y primera de octubre.
+			<br>
+			El alumnado m�s peque�o, los ni�os y ni�as de infantil disfrutaron de una tarde de convivencia con juegos en el patio del recreo.
+			<br>
+			En la secci�n de primaria se agruparon los cursos 1� y 6�, 2� y 5� fomentando el contacto entre grupos de diferentes edades, arrancando el proyecto Hermano Mayor que se desarrolla en esta secci�n.  3� con 4� celebraron su jornada de convivencia en el vecino Parque Delicias. Acabaron todos los cursos con una sencilla e intensa celebraci�n.
+			</p>
+		</div>
+		<div name="noticia2" id="noticia2" style="display:none">
+			<h2>Noticia 2</h2>
+			<p>
+			Nuestra incorporaci�n al programa en un curso como este, en el que el 9 de junio se celebrar�n elecciones al Parlamento Europeo, supone una gran ocasi�n para que docentes y alumnado, conozca de cerca las oportunidades que nos ofrece la Uni�n Europea; lo que significa en nuestra vida cotidiana y lo que podemos hacer para alcanzar una Europa m�s fuerte, unida y solidaria.
+			</p>
+		</div>
+		<div name="noticia3" id="noticia3" style="display:none">
+			<h2>Noticia 3</h2>
+			<p>
+			Estamos a las puertas de que nuestra ciudad celebre sus fiestas en honor a la Virgen del Pilar, unas fiestas muy esperadas por todos, aunque como padres y madres tambi�n nos preocupa la forma que tienen los adolescentes de divertirse y su relaci�n con el alcohol.
+			<br>
+			Desde el Centro Municipal de Atenci�n y Prevenci�n de las Adicciones (CMAPA) nos hacen llegar el folleto de alcohol Las dos caras del alcohol. Se trata de un folleto dirigido a padres y madres del alumnado de Secundaria donde se dan herramientas para concienciar a estos j�venes sobre los peligros del alcohol
+			</p>
+		</div>
+		<div name="noticia4" id="noticia4" style="display:none">
+			<h2>Noticia 4</h2>
+			<p>
+			Ciento cincuenta personas participaron, en nombre de la comunidad educativa de Salesianos Zaragoza, en la Ofrenda de Flores a Nuestra Virgen del Pilar, patrona de Zaragoza, de Arag�n y de la Hispanidad.<br>
+			Un acto organizado, como todos los a�os, por la Asociaci�n de Antiguos Alumnos. El grupo sali� a las 8 de la ma�ana de la calle Albareda y recorri� las calles de Zaragoza hasta llegar a la plaza del Pilar donde entregaron sus flores a la Virgen.
+			</p>
+		</div>
+		<div name="noticia5" id="noticia5" style="display:none">
+			<h2>Noticia 5</h2>
+			<p>
+			En Arag�n, la Asociaci�n Aragonesa Pro Salud Mental (ASAPME- Arag�n) entreg� sus premios anuales el pasado 10 de octubre, D?a de la Salud Mental, en un acto institucional celebrado en la sala de la Corona del Edificio Pignatelli y, que en esta ocasi�n, recayeron en el profesor Antonio L�pez de Salesianos Zaragoza y la Fundaci�n Tamdis.
+			</p>
+		</div>
+		<div name="noticia6" id="noticia6" style="display:none">
+			<h2>Noticia 6</h2>
+			<p>
+			Desde el Centro Municipal de Atenci�n y Prevenci�n de las Adicciones nos llega estas recomendaciones para disfrutar de las Fiestas del Pilar de forma saludable.<br>
+			Os dejamos el folleto completo y adelantamos un peque�o resumen:<br>
+			Actualmente en Espa�a, el alcohol es la droga m�s consumida, destacando su consumo entre las personas m�s j�venes, que no la reconocen como una droga.
+			</p>
+		</div>
+	</div>
+	<div class="pie">
+			<a href="" name="enlace" id="enlace"><img src="" name="logo" id="logo"></a>
+	</div>
+</div>
+</BODY>
+</HTML>

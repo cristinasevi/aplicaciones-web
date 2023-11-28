@@ -1,0 +1,170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> colabora.html </TITLE>
+<link rel="stylesheet" type="text/css" href="estilos.css">
+<script language="JavaScript">
+	var a = 0;
+	logos = new Array()
+	logos[1] = "./imagenes/bsh.jpg";
+	logos[2] = "./imagenes/caf.jpg";
+	logos[3] = "./imagenes/ayuntamiento.png";
+	logos[4] = "./imagenes/dga.jpg";
+
+	enlaces = new Array()
+	enlaces[1] = "https://www.bsh-group.com/es/";
+	enlaces[2] = "https://www.caf.net/es/trabaja-caf/trabaja-caf.php";
+	enlaces[3] = "https://www.zaragoza.es/sede/";
+	enlaces[4] = "https://www.aragon.es/";
+	function cargarpie(){
+		a = Math.floor(Math.random()*4)+1;
+		logo.src = logos[a];
+		enlace.href = enlaces[a];
+		temp1 = setTimeout("cargarpie()",500)
+	}
+
+	var b = 0;
+	color = new Array()
+	color[1] = "blue";
+	color[2] = "green";
+	color[3] = "red";
+	color[4] = "yellow";
+	color[5] = "pink";
+
+	function cambiarcolor(){
+		b = Math.floor(Math.random()*5)+1;
+		tabla.style.backgroundColor = color[b];
+	}
+
+	function comprobaremail(){
+	
+		if (form.email1.value == form.email2.value){
+			botonenviar.style.display="";
+		}
+		else{
+			window.alert("Email NO COINCIDE");
+			botonenviar.style.display="none";
+			form.email1.focus();
+            form.email1.select();
+		}
+	}
+
+	function comprobaredad(){
+		if (form.edad.value < 18){
+			window.alert("Es MENOR DE EDAD")
+		}
+	}
+
+	function comprobarciudad(){
+		if (form.ciudad.value == "Zaragoza" || form.ciudad.value == "Huesca" || form.ciudad.value == "Teruel"){
+			window.alert("Por ser ARAGONÉS. Le llegará un email con un 15% de descuento en el próximo evento.")
+		}
+	}
+  </script>
+</HEAD>
+<BODY onload="cargarpie(), cambiarcolor()">
+<div class="contenedor" >
+	<div class="cabecera">
+		<img src="./imagenes/cabecera.jpg" border="0" usemap="#salesianos">
+		<map name="salesianos">
+			<area shape="rect" title="Salesianos" href="https://zaragoza.salesianos.edu" coords="20,26,78,84">
+		</map>
+		</div>
+		<div class="menu">
+			<ul>
+				<li><a href="./index.html"> Inicio</a></li>
+				<li><a href="./noticias.html"> Noticias</a></li>
+				<li><a href="./colabora.html"> Colabora</a></li>
+				<li><a href="./encuesta.html"> Encuesta</a></li>
+			</ul>
+		</div>
+	<div class="cuerpo">
+	<!-- Preparar el formulario de colabora -->
+		<form action="./index.html" name="form" id="form">
+			<table width="100%" border="0" name="tabla" id="tabla">
+				<tr>
+					<td colspan="3" align="center" bgcolor="lightgrey">INSCRIPCI�N EVENTO ZONA CENTRO	</td>
+				</tr>
+				<tr>
+					<td>Nombre del participante *</td>
+					<td><input type="text" name="nombre" id="nombre" size="20" placeholder="Nombre" maxlenght="20" required></td>
+					<td><input type="text" name="apellido" id="apellido" size="40" placeholder="Apellidos" maxlenght="40" required></td>
+					
+				</tr>
+				<tr>
+					<td>Empresa *</td>
+					<td colspan="2"><input type="text" name="empresa" id="empresa" size="60" maxlenght="80" required></td>
+				</tr>
+				<tr>
+					<td>Evento *</td>
+					<td>
+						<select name="evento" id="evento" required>
+							<option selected value="">Elige Evento</option>
+							<option value="1">Formaci�n EFQM 202</option>
+							<option value="2">Direcci�n FP</option>
+							<option value="3">Proyecto Pastoral</option>
+							<option value="4">Reuni�n Direcci�n</option>
+						</select>
+					</td>
+					<td>Edad * <input type="number" name="edad" id="edad" required onblur="comprobaredad()"></td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td><input type="email" name="email1" id="email1" placeholder="email" maxlenght="40" size="40"></td>
+					<td><input type="email" name="email2" id="email2" placeholder="Repite email" maxlenght="40" size="40" onblur="comprobaremail()"></td>
+				</tr>
+				<tr>
+					<td>Domicilio y Ciudad *</td>
+					<td><input type="text" name="domicilio" name="domicilio" placeholder="Domicilio" maxlenght="40" size="40" required></td>
+					<td>
+						<select required onchange="comprobarciudad()" name="ciudad" id="ciudad">
+							<option selected value="">Elige Ciudad</option>
+							<option value="Zaragoza">Zaragoza</option>
+							<option value="Huesca">Huesca</option>
+							<option value="Teruel">Teruel</option>
+							<option value="Barcelona">Barcelona</option>
+							<option value="Tarragona">Tarragona</option>
+							<option value="Lleida">Lleida</option>
+							<option value="Girona">Girona</option>
+							<option value="Valencia">Valencia</option>
+							<option value="Castell�n">Castell�n</option>
+							<option value="Alicante">Alicante</option>
+							<option value="Murcia">Murcia</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Participaci�n en: *</td>
+					<td colspan="2" required>
+						Workshops <input type="checkbox" name="participaci�n" id="participaci�n" value="1">
+						Conferencias <input type="checkbox" name="participaci�n" id="participaci�n" value="2">
+						Exposici�n <input type="checkbox" name="participaci�n" id="participaci�n" value="3">
+						Cena final <input type="checkbox" name="participaci�n" id="participaci�n" value="4">
+					</td>
+				</tr>
+				<tr>
+					<td>Necesita alojamiento: *</td>
+					<td colspan="2" required>
+						S� <input type="radio" name="alojamiento" id="alojamiento" value="1">
+						No <input type="radio" name="alojamiento" id="alojamiento" value="0">
+					</td>
+				</tr>	
+				<tr>
+					<td>Subir imagen DNI</td>
+					<td colspan="2"><input type="file" name="dni" id="dni"></td>
+				</tr>	
+				<tr>
+					<td>Observaciones</td>
+					<td colspan="2"><textarea cols="80" rows="5"></textarea></td>
+				</tr>	
+				<tr>
+					<td colspan="3" align="center"><input type="submit" value="Enviar Formulario" name="botonenviar" id="botonenviar" style="display:none"></td>
+				</tr>	
+			</table>
+		</form>
+	<div class="pie">
+			<a href="" name="enlace" id="enlace"><img src="" name="logo" id="logo"></a>
+	</div>
+</div>
+</BODY>
+</HTML>
