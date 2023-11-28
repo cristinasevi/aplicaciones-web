@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>11-Movimientos.html</title>
+  <script language="JavaScript">
+    var izdo = 0;
+    var sup = 0;
+    var captura = 0;
+    function mover() {
+      izdo = Math.floor(Math.random() * 800);
+      sup = Math.floor(Math.random() * 500);
+      mosquito1.style.left = izdo + "px";
+      mosquito1.style.top = sup + "px";
+
+      izdo = Math.floor(Math.random() * 800);
+      sup = Math.floor(Math.random() * 500);
+      mosquito2.style.left = izdo + "px";
+      mosquito2.style.top = sup + "px";
+
+      izdo = Math.floor(Math.random() * 800);
+      sup = Math.floor(Math.random() * 500);
+      mosquito3.style.left = izdo + "px";
+      mosquito3.style.top = sup + "px";
+      setTimeout("mover()", 500);
+    }
+
+    function comprobar(mosquito) {
+      mosquito.style.display = "none";
+
+      captura = captura + 1;
+      if (captura == 3) {
+        premio.style.display = "";
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-image: url("./imágenes/jungla.jpg");
+    }
+  </style>
+</head>
+
+<body onload="mover()" align="center">
+  <img name="mosquito1" id="mosquito1" src="./imágenes/mosquito.gif" width="200px" style="position:absolute"
+    onclick="comprobar(mosquito1)">
+  <img name="mosquito2" id="mosquito2" src="./imágenes/mosquito2.gif" width="200px" style="position:absolute"
+    onclick="comprobar(mosquito2)">
+  <img name="mosquito3" id="mosquito3" src="./imágenes/mosquito.gif" width="200px" style="position:absolute"
+    onclick="comprobar(mosquito3)">
+  <img src="./imágenes/premio.jpg" name="premio" id="premio" style="display:none">
+</body>
+
+</html>
+
+
+<!-- 
+Incorporar 2 mosquitos más
+Contabilizar las capturas para que cuando lleguen a 3 la página
+mustre una imagen de premio.
+ -->

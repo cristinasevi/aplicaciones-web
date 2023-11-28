@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>11-MovimientosB.html</title>
+  <script language="JavaScript">
+    var izdo = 0;
+    function mover() {
+      // parseInt --> convierte el objeto q le pasemos a número para q se pueda sumar
+      izdo = Math.floor(Math.random() * 50);
+      mosquito1.style.left = parseInt(mosquito1.style.left) + izdo + "px";
+
+      izdo = Math.floor(Math.random() * 50);
+      mosquito2.style.left = parseInt(mosquito2.style.left) + izdo + "px";
+
+      if (parseInt(mosquito1.style.left) + 100 > 650) // si supera línea de meta que está en 650px
+      {
+        window.alert("Ha ganado MOSQUITO 1!!!");
+        clearTimeout(temp1);
+      }
+      else {
+        if (parseInt(mosquito2.style.left) + 100 > 650) // si supera línea de meta que está en 650px
+        {
+          window.alert("Ha ganado MOSQUITO 2!!!");
+          clearTimeout(temp1);
+        }
+      }
+      temp1 = setTimeout("mover()", 100)
+    }
+
+    function comprobar(mosquito) {
+      mosquito.style.display = "none";
+
+      captura = captura + 1;
+      if (captura == 3) {
+        premio.style.display = "";
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-image: url("./imágenes/jungla.jpg");
+    }
+  </style>
+</head>
+
+<body onload="mover()" align="center">
+  <input type="button" value="START" onclick="mover()">
+  <img name="mosquito1" id="mosquito1" src="./imágenes/mosquito.gif" width="100px"
+    style="position:absolute;left:5px;top:100px" onclick="comprobar(mosquito1)">
+  <img name="mosquito2" id="mosquito2" src="./imágenes/mosquito2.gif" width="100px"
+    style="position:absolute;left:5px;top:300px" onclick="comprobar(mosquito2)">
+  <img name="meta" id="meta" src="./imágenes/meta.png" style="position:absolute;left:650px;top:100px">
+  <img src="./imágenes/premio.jpg" name="premio" id="premio" style="display:none">
+</body>
+
+</html>
+
+
+<!-- 
+Incorporar 2 mosquitos más
+Contabilizar las capturas para que cuando lleguen a 3 la página
+mustre una imagen de premio.
+ -->
