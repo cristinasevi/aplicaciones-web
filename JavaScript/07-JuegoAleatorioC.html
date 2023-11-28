@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>06-JuegoAleatorioB.html</title>
+  <script language="JavaScript">
+    var aleatorio = 0;
+    var intentos = 0;
+    var inicio = 1;
+    var fin = 100;
+    function generar() 
+    {
+        aleatorio = Math.floor(Math.random()*100)+1;
+        mensaje.innerHTML="<h3>Introduce un número entre el 1 y el 100 </h3>";
+    }
+    function comprobar() 
+    {
+        if (numero.value > aleatorio)
+        {
+            fin = numero.value;
+            mensaje.innerHTML="<h2>Introduce un número entre " + inicio + " y " + fin +"  </h2>";
+
+            intentos = intentos + 1;            
+        }
+        if (numero.value < aleatorio)
+        {
+            inicio = numero.value;
+            mensaje.innerHTML="<h2>Introduce un número entre " + inicio + " y " + fin +" </h2>";
+
+            intentos = intentos + 1;
+        }
+        if (numero.value == aleatorio)
+        {
+            mensaje.innerHTML=("Has ACERTADO!!!")
+        }
+        if (intentos == 5)
+        {
+            juego.style.display="none";
+            mensajefin.innerHTML=("Has PERDIDO!!! El número era: " + aleatorio);
+            mensajefin.style.display="";
+        }
+    }
+  </script>
+</head>
+<!-- Al cargar la página se genera un número aleatorio -->
+ <body onload="generar()">
+    <div name="juego" id="juego">
+        <p name="mensaje" id="mensaje"></p>
+        <input type="text" name="numero" id="numero">
+        <br>
+        <input type="button" value="Comprobar" onclick="comprobar()">
+    </div>
+    <h1 name="mensajefin" id="mensajefin" style="display:none"></h1>
+</body>
+</html>

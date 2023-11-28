@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>06-JuegoAleatorio.html</title>
+  <script language="JavaScript">
+    var aleatorio = 0;
+    var intentos = 0;
+    function generar() 
+    {
+        aleatorio = Math.floor(Math.random()*10)+1;
+    }
+    function comprobar() 
+    {
+        if (numero.value > aleatorio)
+        {
+            window.alert("El número introducido es mayor");
+            intentos = intentos + 1;
+        }
+        if (numero.value < aleatorio)
+        {
+            window.alert("El número introducido es menor.");
+            intentos = intentos + 1;
+        }
+        if (numero.value == aleatorio)
+        {
+            window.alert("Has ACERTADO!!!")
+        }
+        if (intentos == 3)
+        {
+            juego.style.display="none";
+            fin.style.display="";
+        }
+    }
+  </script>
+</head>
+<!-- Al cargar la página se genera un número aleatorio -->
+ <body onload="generar()">
+    <div name="juego" id="juego">
+        <input type="text" name="numero" id="numero">
+        <br>
+        <input type="button" value="Comprobar" onclick="comprobar()">
+    </div>
+    <h1 name="fin" id="fin" style="display:none">Has acabado el juego por superar 3 intentos</h1>
+</body>
+</html>
