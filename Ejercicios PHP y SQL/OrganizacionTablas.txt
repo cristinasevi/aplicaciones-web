@@ -1,0 +1,20 @@
+PARTICIPANTES
+idParticipante
+nombre
+apellidos
+idProvincia
+idClub
+
+PROVINCIAS
+idProvincia
+nombreProvincia
+
+CLUBES 
+idClub
+nombreClub
+
+SELECT PARTICIPANTES.nombre, PARTICIPANTES.apellidos, 
+PROVINCIAS.nombreProvincia 
+FROM PARTICIPANTES, PROVINCIAS
+WHERE (PARTICIPANTES.idProvincia=PROVINCIAS.idProvincia) 
+and PROVINCIAS.nombreProvincia="Zaragoza"
