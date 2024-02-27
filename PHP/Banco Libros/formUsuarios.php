@@ -32,7 +32,7 @@
       </tr>
       <tr>
         <td>Móvil</td>
-        <td><input type="tel" name="f_movil" id="f_movil"></td>
+        <td><input type="tel" name="f_movil" id="f_movil" maxlenght="9"></td>
       </tr>
       <tr>
         <td>Clave</td>
@@ -41,6 +41,7 @@
       <tr>
         <td colspan="2" align="center">
           <input type="submit" value="ENVIAR">
+          <input type="button" value="LISTADO" onclick="window.open('lstUsuarios.php', '_parent')">
           <a href="inicio.php">Volver</a>
         </td>
       </tr>

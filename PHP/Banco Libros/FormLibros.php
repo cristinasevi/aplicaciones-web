@@ -19,7 +19,7 @@
         <td colspan="2"><h2>Bancolibros</h2></td>
       </tr>
       <tr>
-        <td colspan="2" align="right">Usuario: <?php echo $_SESSION['usu']?></td>
+        <td colspan="2" align="right">Usuario: <?php echo $_SESSION['usu']?> &nbsp; &nbsp; <a href="inicio.php">Volver</td>
       </tr>
       <tr>
         <td>ISBN</td>

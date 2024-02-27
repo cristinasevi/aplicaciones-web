@@ -9,16 +9,30 @@
   <title>lstLibros.php</title>
 </head>
 <body>
+    <?php
+    session_start();
+    ?>
     <table align="center" width="90%" border="1">
         <tr>
             <td colspan="11"><h2 align="center">Información LIBROS</h2></td>
         </tr>
         <tr>
+        <td colspan="11" align="right">Usuario: <?php echo $_SESSION['usu']?> &nbsp; &nbsp; <a href="FormLibros.php">Volver</td>
+      </tr>
+        <tr>
             <td>ID</td><td>ISBN</td><td>TITULO</td><td>MODULO</td><td>EDITORIAL</td><td>USUARIO</td><td>PRECIO</td><td>VENDIDO</td><td>FECHA</td><td>COMENTARIOS</td><td></td>
         </tr>
     <?php 
     include("conexion.php");
-    $sql="SELECT libros.*, editorial.*, modulos.* FROM libros, editorial, modulos WHERE (libros.idEditorial=editorial.idEditorial and libros.idModulo=modulos.idModulo) ORDER BY libros.idLibro"; // ORDER BY libros.idLibro DESC --> ordena de mayor a menor
+
+    if ($_SESSION['usu']=='admin')
+    {
+        $sql="SELECT libros.*, editorial.*, modulos.* FROM libros, editorial, modulos WHERE (libros.idEditorial=editorial.idEditorial and libros.idModulo=modulos.idModulo) ORDER BY libros.idLibro"; // ORDER BY libros.idLibro DESC --> ordena de mayor a menor
+    }
+    else
+    {
+        $sql="SELECT libros.*, editorial.*, modulos.* FROM libros, editorial, modulos WHERE (libros.idEditorial=editorial.idEditorial and libros.idModulo=modulos.idModulo) and libros.idUsuario='$_SESSION[usu]' ORDER BY libros.idLibro";
+    }
     $registros=mysqli_query($conexion,$sql); 
     while($linea=mysqli_fetch_array($registros)) 
     {

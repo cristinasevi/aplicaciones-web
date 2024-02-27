@@ -19,6 +19,9 @@
         <td colspan="2"><h2>Añadir Módulos</h2></td>
       </tr>
       <tr>
+        <td colspan="2" align="right">Usuario: <?php echo $_SESSION['usu']?></td>
+      </tr>
+      <tr>
         <td>Modulo</td>
         <td><input type="text" name="f_modulo" id="f_modulo" maxlenght="50"></td>
       </tr>

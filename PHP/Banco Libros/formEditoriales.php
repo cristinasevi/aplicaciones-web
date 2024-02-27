@@ -19,6 +19,9 @@
         <td colspan="2"><h2>Añadir Editoriales</h2></td>
       </tr>
       <tr>
+        <td colspan="2" align="right">Usuario: <?php echo $_SESSION['usu']?></td>
+      </tr>
+      <tr>
         <td>Editorial</td>
         <td><input type="text" name="f_editorial" id="f_editorial" maxlenght="50"></td>
       </tr>
